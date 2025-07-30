@@ -1,0 +1,221 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISA Card Payment</title>
+    <link rel="icon" href="logo.jpg">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;600;700;800;900&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,900;1,100;1,300;1,400;1,700&family=Ubuntu:wght@400;700&display=swap');
+     </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="visa.css">
+</head>
+<body>
+    <div class="container1">
+        <div class="left" style="margin-top: -90px;">
+            <div class="order">
+                <div class="order-name">
+                    <div class="h">Booking Confirmation</div><br>
+                    <div class="p">Turning moments into memories:<br> Your event, our expertise.</div><br><br>
+                </div>
+            </div>
+            <div class="billing" style="background-color: transparent;box-shadow: 0 0 0 0 transparent;">
+                    <!--<div class="rowinfo">
+                        <div class="info">Ticket per person</div>
+                    <div class="rate" > &#8377 <span id="rate">900</span></div>
+                    </div>
+                    <div class="rowinfo">
+                        <div class="info">Number of tickets booked</div>
+                    <div class="rate"><input type="number" id="no" value="1" min="1"></div>
+                    </div>
+                    <div class="rowinfo">
+                        <div class="info">Amount</div>
+                    <div class="rate" > &#8377 <span id="intamt">900</span></div>
+                    </div>
+                    <div class="rowinfo">
+                        <div class="info"></div>
+                    <div class="rate"> ................</div>
+                    </div>
+                    <div class="rowinfo">
+                        <div class="info">Discounts</div>
+                    <div class="rate"> -</div>
+                    </div>
+                    <div class="rowinfo">
+                        <div class="info"></div>
+                    <div class="rate"> ................</div>
+                    </div>
+                    <div class="rowinfo">
+                        <div class="info">Total Amount payable</div>
+                    <div class="rate"> <b>&#8377 <span id="amt">900</span></b></div>
+                    </div>-->
+                    <img src="logo_zoom.png" alt="" id="bill" style="position: absolute;border-radius: 20px;width: 300px;margin-left: 40px;margin-top: -30px;">
+
+            </div>
+        </div>
+        <div class="right">
+            <br><br>
+            <div class="card" style="background-image:linear-gradient(rgb(113, 13, 114),rgb(82, 4, 82),rgb(60, 0, 60));border-radius:15px;height: 210px;width: 400px;">
+                
+                <div class="first">
+                    <div class="head">
+                        <span class="head1">Payment card</span> <br><br><br>
+                        <img src="visaimg-removebg-preview.png" alt=""  width="60px">
+                    </div>
+                <div class="chip">
+                    <img  src="golden-chip-sim-credit-debit-card-element-electronic-icon-illustration-free-vector-removebg-preview.png" alt="" width="70px">
+                </div>
+                </div>
+                <br><br>
+                <div class="num">****   ****   **** 
+                    <pre> </pre>
+                    <span id="cno1">****</span>
+                </div>
+                <div class="mid">
+                    <div class="valid">
+                        <div class="v">Valid</div>
+                        <div class="validdate">
+                            <b><span id="mo" style="font-weight: 300; font-size: 12px;">MM/YY</span></b>
+                        </div>
+                    </div>
+                    <div class="valid">
+                        <div class="v">CVV</div>
+                        <div class="validdate">
+                            <b><span id="cvv" style="font-weight: 300; font-size: 12px;">CVV</span></b>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="last">
+                 <div class="name">
+                        <span id="cname">Card Holder's Name</span>
+                    </div>
+                </div>
+            </div>
+
+            <form class="form" action="/generate-ticket" method="post">
+                <input type="text" id="cardname1" placeholder="Card Holder's Name">
+                <input type="text" id="cardnumber" placeholder="Card Number" maxlength="16">
+                <div class="mc">
+                    <input type="text" placeholder="MM/YY" id="validcard" maxlength="5">
+                <input type="text" placeholder="CVV" id="cvvc" maxlength="3">
+                </div>
+                <input type="text" id="invi1" style="display: none;" name="eventq">
+                <input type="text" id="invi2" style="display: none;" name="eventPrice">
+                <input type="text" id="invi3" style="display: none;" name="eventTitle">
+                <input type="text" id="invi4" style="display: none;" name="u_mail">
+                <input type="text" id="invi5" style="display: none;" name="eventDate">
+                <input type="text" id="invi5" style="display: none;" name="eventTime">
+                <input type="submit" value="Confirm Payment" id="btn2">
+            </form>
+        </div>
+    </div>
+    <script>
+        let n=document.getElementById("no");
+        let p=document.getElementById("rate");
+        let ia=document.getElementById("intamt");
+        let amt=document.getElementById("amt");
+
+        let eventq = localStorage.getItem('quant');
+        let eventPrice = localStorage.getItem('eventPrice');
+        let eventTitle = localStorage.getItem('eventTitle');
+        let u_mail = localStorage.getItem('email');
+        let eventDate = localStorage.getItem('eventDate');
+        let eventTime = localStorage.getItem('eventTime');
+
+        document.getElementById('invi1').value=eventq;
+        document.getElementById('invi2').value=eventPrice;
+        document.getElementById('invi3').value=eventTitle;
+        document.getElementById('invi4').value=u_mail;
+        document.getElementById('invi5').value=eventDate;
+        document.getElementById('invi6').value=eventTime;
+
+        let q= document.getElementById('no').value=parseInt(eventq);
+        let price= document.getElementById('rate').innerHTML=parseInt(eventPrice.substring(3));
+        let tprice = document.getElementById('intamt').innerHTML=(parseInt(eventPrice.substring(3)))*q;
+        
+        let no=n.valueAsNumber;
+        ia.innerHTML=price*q;
+            amt.innerHTML=ia.innerHTML;
+
+        n.oninput=
+        function inc(){
+        let no=n.valueAsNumber;
+        intamt.innerHTML=p.innerHTML*no;
+            amt.innerHTML=intamt.innerHTML;
+        }
+
+        
+        document.getElementById("cardname1").oninput=
+        function dis1(){
+            let name=document.getElementById("cname");
+            let cname=document.getElementById("cardname1").value;
+            name.innerHTML=cname;
+        }
+        document.getElementById("cardnumber").oninput=
+        function dis2(){
+            let no1=document.getElementById("cno1");
+            let cno=document.getElementById("cardnumber").value.charAt(12)+document.getElementById("cardnumber").value.charAt(13)+document.getElementById("cardnumber").value.charAt(14)+document.getElementById("cardnumber").value.charAt(15);
+            no1.innerHTML=cno;
+        }
+        document.getElementById("validcard").oninput=
+        function dis3(){
+            let valid=document.getElementById("mo");
+            let vad=document.getElementById("validcard").value;
+            valid.innerHTML=vad.charAt(0)+vad.charAt(1)+"/"+vad.charAt(3)+vad.charAt(4);
+        }
+        document.getElementById("cvvc").oninput=
+        function dis4(){
+            let cvv=document.getElementById("cvv");
+            let c=document.getElementById("cvvc").value;
+            cvv.innerHTML=c;
+        }
+
+
+        document.getElementById("btn2").addEventListener("click", function(event) {
+        event.preventDefault(); 
+
+        let eventq = localStorage.getItem('quant');
+        let eventPrice = localStorage.getItem('eventPrice');
+        let eventTitle = localStorage.getItem('eventTitle');
+        let u_mail = localStorage.getItem('mail');
+        let u_name = document.getElementById('cardname1').value;
+        let eventDate = localStorage.getItem('eventDate');
+        let eventTime = localStorage.getItem('eventTime');
+
+        const formData = new FormData();
+        formData.append('eventq', eventq);
+        formData.append('eventPrice', eventPrice);
+        formData.append('eventTitle', eventTitle);
+        formData.append('u_mail', u_mail);
+        formData.append('u_name', u_name);
+        formData.append('eventDate', eventDate);
+        formData.append('eventTime', eventTime);
+
+        fetch('/generate-ticket', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+        if (data && data.message == "Ticket generation successful") {
+            document.getElementById('img').style.display='block';
+            alert("Ticket generated and sent successfully!");
+        } else {
+            alert("Error generating ticket");
+        }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+
+    </script>
+    
+</body>
+</html>

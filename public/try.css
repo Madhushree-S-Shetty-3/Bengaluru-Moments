@@ -1,0 +1,235 @@
+*{
+    margin: 0%;padding: 0;
+}
+body{
+    background-color: rgb(39, 39, 39);
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+html{
+    scroll-behavior:smooth;
+    overflow: hidden;
+}
+.entire{
+    display: flex;
+    justify-content: space-between;
+}
+#homebtn{
+    position: absolute;
+    margin: 15px;
+    padding: 8px;
+    font-size: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    color: black;
+}
+#homebtn:hover{
+    border-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    color: whitesmoke;
+}
+#homebtn:active{
+    background-color: rgb(0, 0, 0);
+    color: antiquewhite;
+    font-size: 22px;
+
+}
+.left{
+    position: absolute;
+    z-index: -1;
+    background-image: radial-gradient(white,rgba(245, 245, 220, 0.905),rgba(143, 143, 143, 0.145));
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 50%;
+    height: 100%;
+    margin-left: 0;
+    box-shadow: 2px 3px 25px 10px rgba(0, 0, 0, 0.872);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.head h1{
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 35px;
+    padding: 35px;
+    margin-top: -50px;
+}
+.first{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+    padding: 15px;
+}
+.con{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 5px;
+}
+.con .h{
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
+.con .d{
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    color: rgb(42, 42, 42);
+}
+.right{
+    width: 50%;
+}
+.right form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;  
+    padding-top: 40px;
+}
+.right input{
+    background-color: black;
+    color: beige;
+    padding: 12px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 12px;
+    width: 100%;
+    margin: 10px;
+}
+input::placeholder{
+    color: beige;
+    font-size: 12px;
+}
+.mail{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.mail span{
+    margin-bottom: -10px;
+    margin-left: 15px;
+    font-size: 10px;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.name span{
+    margin-bottom: -10px;
+    margin-left: 15px;
+    font-size: 10px;
+
+}
+.tag{
+    width: 100%;
+}
+.desc textarea{
+    background-color: black;
+    color: beige;
+    padding: 12px;
+    font-size: 12px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-family:  'Poppins', sans-serif;
+    width: 570px;
+    margin: 10px;
+    margin-right: -5px;
+}
+textarea::placeholder{
+    color: beige;
+    font-size: 12px;
+}
+.sub{
+    margin-top: -45px;
+}
+.btn{
+    width: 200px;
+    background-color: beige;
+    color: black;
+    font-size: 17px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 10px;
+}
+.time{
+    display: flex;
+    justify-content: space-around;
+    align-items: last baseline;
+    font: 15px;
+    color: beige;
+    margin-top: -20px;
+}
+.date{
+    margin: 20px;width: 167px;
+}
+.from{
+    margin: 20px;width: 167px;
+}
+.price{
+    margin: 20px;width: 167px;
+}
+label{
+    font-size: 13px;
+    padding-left: 15px;
+}
+.loc{
+    width: 100%;
+    margin-top: -10px;
+}
+.photo{
+    border: 2px dashed beige;
+    color: wheat;
+    width: 110px;height: 110px;
+    margin-bottom: -10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-image: radial-gradient(transparent,transparent,rgb(19, 19, 19));
+}
+.photo header{
+    color: beige;
+    font-size: 15px;
+    margin: 3px;
+}
+.photo span{
+    color: rgb(155, 155, 155);
+    font-size: 12px;
+    padding: 2px;
+    margin: 2px;
+}
+.photo button{
+    width: 120px;
+    border: none;
+    outline: none;
+    background-color: beige;
+    color: black;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-left: -20px;
+}
+.btn{
+    margin-top: 25px;
+    margin-bottom: -25px;
+    cursor: pointer;
+    margin-left: 50px;
+}

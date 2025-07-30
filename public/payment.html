@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.jpg">
+    <title>Payment</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;600;700;800;900&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,900;1,100;1,300;1,400;1,700&family=Ubuntu:wght@400;700&display=swap');
+     </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="paystyle.css">
+</head>
+<body>
+    <a href="booking.html"><i class='bx bx-arrow-back' id="homebtn" style="margin-left: -8px;font-size: 20px;font-weight: 900;"></i></i></a>
+
+    <div class="container" id="container">
+        
+        <div class="title">
+            <h4>Select a <span style="color: aqua">Payment</span> method</h4>
+        </div>
+
+        <form action="#" id="f">
+            <input type="radio" name="payment" id="visa">
+            <input type="radio" name="payment" id="mastercard">
+            <input type="radio" name="payment" id="upi">
+
+            <div class="category">
+                <label for="visa" class="visaMethod">
+                    <div class="imagename"><div class="imgContainer visa">
+                        <img src="visaimg-removebg-preview.png" alt="">
+                    </div>
+                    <span>VISA</span>
+                </div>
+                <span class="check"><i class='bx bxs-check-circle' style="color: aqua;"></i></span>
+                </label>
+
+                <label for="mastercard" class="masMethod">
+                    <div class="imagename"><div class="imgContainer">
+                        <img src="mastercard-removebg-preview (1).png" alt="">
+                    </div>
+                    <span>Mastercard</span>
+                </div>
+                <span class="check"><i class='bx bxs-check-circle' style="color: aqua;"></i></span>
+                </label>
+
+                <label for="upi" class="upiMethod">
+                    <div class="imagename"><div class="imgContainer">
+                        <img src="upi.png" alt="">
+                    </div>
+                    <span>UPI</span>
+                </div>
+                <span class="check"><i class='bx bxs-check-circle' style="color: aqua;"></i></span>
+                </label>
+            </div>
+            <span class="error" id="errorMsg">* Please select any one gateway!</span>
+            <div class="btn1"><button class="btn" id="btn" >Continue</button></div>
+        </form>
+
+    </div>
+        
+
+    <script>
+
+        document.getElementById("btn").addEventListener("click", function(event) {
+            event.preventDefault(); 
+    
+            let paymentMethods = document.getElementsByName("payment");
+            let selectedMethod = false;
+    
+            for (let i = 0; i < paymentMethods.length; i++) {
+                if (paymentMethods[i].checked) {
+                    selectedMethod = true;
+                    break;
+                }
+            }
+    
+            if (!selectedMethod) {
+                document.getElementById("errorMsg").style.display = "block";
+            } 
+            if(document.getElementById("visa").checked)
+            {
+                window.location.assign("visa.html");
+            }
+            if(document.getElementById("mastercard").checked)
+            {
+                window.location.assign("mastercard.html");
+            }
+            if(document.getElementById("upi").checked)
+            {
+                window.location.assign("upi.html");
+            }
+        });
+    </script>
+    
+</body>
+</html>

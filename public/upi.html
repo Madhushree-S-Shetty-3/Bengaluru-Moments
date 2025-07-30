@@ -1,0 +1,229 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Payment</title>
+    <link rel="icon" href="logo.jpg">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;600;700;800;900&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,900;1,100;1,300;1,400;1,700&family=Ubuntu:wght@400;700&display=swap');
+     </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="Upipay.css">
+</head>
+<body>
+    <div class="container1">
+        <div class="left" style="margin-top: -90px;">
+            <div class="order">
+                <div class="order-name">
+                    <div class="h">Booking Confirmation</div><br>
+                    <div class="p">Turning moments into memories:<br> Your event, our expertise.</div><br><br>
+                </div>
+            </div>
+            <div class="billing" style="background-color: transparent;box-shadow: 0 0 0 0 transparent;">
+                    <!--<div class="rowinfo">
+                        <div class="info">Ticket per person</div>
+                    <div class="rate" > &#8377 <span id="rate">900</span></div>
+                    </div>
+                    <div class="rowinfo">
+                        <div class="info">Number of tickets booked</div>
+                    <div class="rate"><input type="number" id="no" value="1" min="1"></div>
+                    </div>
+                    <div class="rowinfo">
+                        <div class="info">Amount</div>
+                    <div class="rate" > &#8377 <span id="intamt">900</span></div>
+                    </div>
+                    <div class="rowinfo">
+                        <div class="info"></div>
+                    <div class="rate"> ................</div>
+                    </div>
+                    <div class="rowinfo">
+                        <div class="info">Discounts</div>
+                    <div class="rate"> -</div>
+                    </div>
+                    <div class="rowinfo">
+                        <div class="info"></div>
+                    <div class="rate"> ................</div>
+                    </div>
+                    <div class="rowinfo">
+                        <div class="info">Total Amount payable</div>
+                    <div class="rate"> <b>&#8377 <span id="amt">900</span></b></div>
+                    </div>-->
+                    <img src="logo_zoom.png" alt="" id="bill" style="position: absolute;border-radius: 20px;width: 300px;margin-left: 40px;margin-top: -30px;">
+            </div>
+        </div>
+        <div class="img" id="image" style="display: none;">
+            <img src="payment_done.gif" alt="" width="600px" height="500px" style="position: absolute;z-index: 6;top: 10%;left: 30%;border-radius: 20px;">
+        </div>
+        <div class="right">
+            <div class="imgs">
+                <img src="googlepay-removebg-preview (1).png" alt="" width="120px">
+                <img src="phonepe-removebg-preview.png" alt="" width="90px">
+                <img src="paytm-removebg-preview.png" alt="" width="100px">
+            </div>
+            
+            <form class="form"  action="/generate-ticket" method="post">
+                <input type="text" id="cardname1" name="name" placeholder="Account Holder's Name">
+                <input type="text" id="cardnumber" name="id" placeholder="xxxxxxxxxx@upi" >
+                <input type="submit" value="Confirm Payment" id="btn2">
+                <input type="text" id="invi1" style="display: none;" name="eventq">
+                <input type="text" id="invi2" style="display: none;" name="eventPrice">
+                <input type="text" id="invi3" style="display: none;" name="eventTitle">
+                <input type="text" id="invi4" style="display: none;" name="u_mail">
+                <input type="text" id="invi5" style="display: none;" name="eventDate">
+                <input type="text" id="invi5" style="display: none;" name="eventTime">
+            </form class="form">
+        </div>
+    </div>
+    <script>
+        let n=document.getElementById("no");
+        let p=document.getElementById("rate");
+        let ia=document.getElementById("intamt");
+        let amt=document.getElementById("amt");
+        
+        
+        let eventq = localStorage.getItem('quant');
+        let eventPrice = localStorage.getItem('eventPrice');
+        let eventTitle = localStorage.getItem('eventTitle');
+        let u_mail = localStorage.getItem('email');
+        let eventDate = localStorage.getItem('eventDate');
+        let eventTime = localStorage.getItem('eventTime');
+
+        document.getElementById('invi1').value=eventq;
+        document.getElementById('invi2').value=eventPrice;
+        document.getElementById('invi3').value=eventTitle;
+        document.getElementById('invi4').value=u_mail;
+        document.getElementById('invi5').value=eventDate;
+        document.getElementById('invi6').value=eventTime;
+
+        let ep=document.getElementById('invi2').value;
+        let quan=document.getElementById('invi1').value;
+
+        let q= document.getElementById('no').value=parseInt(quan);
+        let price= document.getElementById('rate').innerHTML=parseInt(ep.substring(3));
+        let tprice = document.getElementById('intamt').innerHTML=(parseInt(ep.substring(3)))*q;
+        
+        let no=n.valueAsNumber;
+        ia.innerHTML=price*q;
+            amt.innerHTML=ia.innerHTML;
+
+        n.oninput=
+        function inc(){
+        let no=n.valueAsNumber;
+        intamt.innerHTML=p.innerHTML*no;
+            amt.innerHTML=intamt.innerHTML;
+        }
+        
+        document.getElementById("cardname1").oninput=
+        function dis1(){
+            let name=document.getElementById("cname");
+            let cname=document.getElementById("cardname1").value;
+            name.innerHTML=cname;
+        }
+        document.getElementById("cardnumber").oninput=
+        function dis2(){
+            let no1=document.getElementById("cno1");
+            let cno=document.getElementById("cardnumber").value.charAt(12)+document.getElementById("cardnumber").value.charAt(13)+document.getElementById("cardnumber").value.charAt(14)+document.getElementById("cardnumber").value.charAt(15);
+            no1.innerHTML=cno;
+        }
+        document.getElementById("validcard").oninput=
+        function dis3(){
+            let valid=document.getElementById("mo");
+            let vad=document.getElementById("validcard").value;
+            valid.innerHTML=vad.charAt(0)+vad.charAt(1)+"/"+vad.charAt(3)+vad.charAt(4);
+        }
+        document.getElementById("cvvc").oninput=
+        function dis4(){
+            let cvv=document.getElementById("cvv");
+            let c=document.getElementById("cvvc").value;
+            cvv.innerHTML=c;
+        }
+
+
+        document.getElementById("btn2").addEventListener("click",async function(event) {
+        event.preventDefault(); 
+
+        let eventq = localStorage.getItem('quant');
+        let eventPrice = localStorage.getItem('eventPrice');
+        let eventTitle = localStorage.getItem('eventTitle');
+        let u_mail = localStorage.getItem('mail');
+        let u_name = document.getElementById('cardname1').value;
+        let eventDate = localStorage.getItem('eventDate');
+        let eventTime = localStorage.getItem('eventTime');
+
+        const formData = new FormData();
+        formData.append('eventq', eventq);
+        formData.append('eventPrice', eventPrice);
+        formData.append('eventTitle', eventTitle);
+        formData.append('u_mail', u_mail);
+        formData.append('u_name', u_name);
+        formData.append('eventDate', eventDate);
+        formData.append('eventTime', eventTime);
+
+        /*fetch('/generate-ticket', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+        if (data && data.message == "Ticket generation successful") {
+            document.getElementById('image').style.display='block';
+            alert("Ticket generated and sent successfully!");
+        } else {
+            alert("Error generating ticket");
+        }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });*/
+
+
+
+        fetch("/generate-ticket", {
+                        method: "POST",
+                        body: formData,
+                    })
+                    /*.then(response => {
+                        if (response.ok) {
+                            return response.text(); // Return the response body
+                        } else {
+                            throw new Error('Ticket Generation failed');
+                        }
+                    })*/
+                    .then(response => {
+                        if (!response.ok) {
+                            console.log('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    /*.then(data => {
+                        console.log('Response from backend:', data);
+                        if (data.message == "Email Sent Successfully") {
+                            document.getElementById('image').style.display='block';
+                        } else {
+                            alert("Failed to send request. Please try again later.");
+                        }
+                    })*/
+                    /*.then(data => {
+                        alert("Ticket Generation successful!");
+                        document.getElementById('image').style.display = 'block';
+                        window.location.href = "YM.html"; // Redirect after successful ticket generation
+                    })*/
+                    .catch(error => {
+                        console.error("Error during ticket generation:", error);
+                        alert("An error occurred. Please try again later.");
+                    });
+     
+                    
+    });
+
+
+    </script>
+    
+</body>
+</html>

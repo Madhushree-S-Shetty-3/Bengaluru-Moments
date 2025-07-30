@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liked Events</title>
+    <link rel="icon" href="logo.jpg">
+    <link rel="stylesheet" href="liked.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body onload="check()">
+    <a href="YM.html"><i class='bx bxs-home' id="homebtn"></i></a>
+
+    <div class="notthere" id="nt">
+        <h1 align="center" style="color: rgb(85, 85, 85);font-size: 40px;font-weight: 800;">Oops !</h1><br>
+            <h3 align="center" style="color: rgb(85, 85, 85);">No events found</h3>
+            <h5 align="center" style="color: rgb(85, 85, 85);">Please do browse through our events to discover your favourites...</h5>
+    </div>
+    <div class="fav">
+        <ul id="li"></ul>
+    </div>
+
+    <script>
+        
+        let eventTitle = localStorage.getItem('eventTitle');
+        let eventDate = localStorage.getItem('eventDate');
+        let eventTime = localStorage.getItem('eventTime');
+        let eventPrice = localStorage.getItem('eventPrice');
+        let img = localStorage.getItem('image');
+        let m = localStorage.getItem('message');
+        
+        function check(){
+            if(m){
+                document.getElementById('nt').style.display='none';
+
+            let li = document.createElement('li');
+            li.id='event';
+
+            let imgElement = document.createElement('img');
+            imgElement.src = img;
+            imgElement.alt = 'Event Image';
+
+            let detailsParagraph = document.createElement('p');
+            detailsParagraph.innerHTML = `${eventDate}    |   ${eventTime} <br> ${eventPrice}`;
+
+            let detailsTitle = document.createElement('h2');
+            detailsTitle.innerHTML = `${eventTitle}`;
+
+            let iconElement = document.createElement('i');
+            iconElement.className = 'bx bx-x-circle';
+
+            iconElement.addEventListener('click', function() {
+                this.parentNode.remove(); 
+                localStorage.removeItem('eventTitle');
+                localStorage.removeItem('eventDate');
+                localStorage.removeItem('eventTime');
+                localStorage.removeItem('eventPrice');
+                localStorage.removeItem('image');
+                localStorage.removeItem('message');
+
+                if (document.getElementById('li').children.length === 0) {
+                    document.getElementById('nt').style.display = 'block';
+                }
+            });
+            let but=document.createElement('button');
+            but.textContent='Proceed';
+            but.id='pro';
+
+            li.appendChild(imgElement);
+            li.appendChild(detailsTitle);
+            li.appendChild(detailsParagraph);
+            li.appendChild(iconElement);
+            li.appendChild(but);
+
+
+            document.getElementById('li').appendChild(li);
+            }if(document.getElementById('li').children.length === 0){
+                document.getElementById('nt').style.display='block';
+                
+            }
+            if(!m){
+                let listItems = document.getElementById('li').getElementsByTagName('li');
+                let titleToRemove = eventTitle;
+
+                for (let i = 0; i < listItems.length; i++) {
+                    let listItemTitle = listItems[i].getElementsByTagName('h2')[0].innerText;
+                    if (listItemTitle == titleToRemove) {
+                        listItems[i].remove();
+                        localStorage.removeItem('eventTitle');
+                        localStorage.removeItem('eventDate');
+                        localStorage.removeItem('eventTime');
+                        localStorage.removeItem('eventPrice');
+                        localStorage.removeItem('image');
+                        localStorage.removeItem('message');
+                        alert("Removed from favourites")
+                        break; 
+                    }
+                }
+
+                if (document.getElementById('li').children.length === 0) {
+                    document.getElementById('nt').style.display = 'block';
+                }
+            }
+            
+        document.getElementById('pro').onclick=function(){
+            location.href="booking.html";
+        }
+        }
+        
+    </script>
+</body>
+</html>

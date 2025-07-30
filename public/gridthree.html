@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fest</title>
+        <link rel="icon" href="logo.jpg">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="./style1.css">
+    </head>
+<body>
+    <div class="image"> 
+        <img src="f2.jpg" alt="" style="margin-top: -80px;">  
+    </div>
+    <div class="home">
+        <a href="YM.html"><i class='bx bxs-home' id="homebtn"></i></a>
+    </div>
+    <div class="sea">
+        <input type="text" placeholder="Search..." id="search">
+        <i class='bx bx-search-alt' style="font-size: 30px;color: rgb(0, 0, 0);padding: 6px;" id="si"></i>
+        <a href="Liked.html"><i class='bx bxs-heart' style='color:#060606;margin-left: 10px;font-size: 30px;color: rgb(0, 0, 0);padding: 6px;'  id="si"></i></a>
+    </div>
+
+    <div class="notfound" id="nf">
+        <span>Oops! Event not found...</span>
+    </div>
+    
+    <div class="con">
+        <div class="head">
+            <h1 align="center">FEST</h1>
+            <h5 align="center">Where joy knows no bounds</h5>
+        </div>
+        <div class="container" id="cone">
+        <div class="item-container">
+            <div class="img-container">
+                <img src="https://i.pinimg.com/474x/33/a1/c6/33a1c60b71eade0facc3f8030a29d1ea.jpg" id="i1" alt="Event dance img">
+            </div>
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title" id="one">Friday Fiesta</p>
+                    <div class="seperator"></div>
+                    <p class="info">Koramangala, Bengaluru</p>
+                    <div class="like">
+                        <p class="price" align="center">Free<i class='bx bx-heart' id="like"></i>
+                            <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                    </div>
+
+                    <div class="additional-info">
+                        <p class="info">
+                             <i class="fa fa-map-marker"></i>
+                             Loft 38
+                        </p>
+                        <p class="info">
+                            <i class="fa fa-calendar"></i>
+                            February 3 | 8PM
+                       </p>
+
+                       <p class="info description">
+                        Friday join Us For An Electrifying EDM and Commercial music At Loft 38, Indranagar.
+Get Ready To Groove To The Hottest Beats Spun By Your favorite DJ Karthik & DJ Deeraj
+                       </p>
+                    </div>
+                </div>
+                <button class="action" onclick="bookEvent('Friday Fiesta', 'February 3', '8PM', 'Rs 0')">Book it</button>
+            </div>
+        </div>
+
+        <div class="item-container">
+            <div class="img-container">
+                <img src="https://i.pinimg.com/474x/49/a4/28/49a428eb4bbfdfc6fdab221001eedaef.jpg" id="i2">
+            </div>
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title"id="two">House Party</p>
+                    <div class="seperator"></div>
+                    <p class="info">Indiranagar, Bengaluru</p>
+                    <div class="like">
+                        <p class="price" align="center">Free<i class='bx bx-heart' id="like1"></i>
+                            <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                    </div>
+
+                    <div class="additional-info">
+                        <p class="info">
+                             <i class="fa fa-map-marker"></i>
+                             Sly Granny
+                        </p>
+                        <p class="info">
+                            <i class="fa fa-calendar"></i>
+                            February 3 | 9PM
+                       </p>
+
+                       <p class="info description">
+                        Hey party people! Are you ready to experience an unforgettable night filled with music, dancing, and endless fun?
+                       </p>
+                    </div>
+                </div>
+                <button class="action" onclick="bookEvent('House Party', 'February 3', '9PM', 'Rs 0')">Book it</button>
+            </div>
+        </div>
+
+        <div class="item-container">
+            <div class="img-container">
+                <img src="https://i.pinimg.com/474x/da/b9/a1/dab9a133b4dca9ea019c2125b2dbcd77.jpg" id="i3">
+            </div>
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title" id="three">Talli Tuesday</p>
+                    <div class="seperator"></div>
+                    <p class="info">White field, Bengaluru</p>
+                    <div class="like">
+                        <p class="price" align="center">Rs 1300<i class='bx bx-heart' id="like2"></i>
+                            <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                    </div>
+
+                    <div class="additional-info">
+                        <p class="info">
+                             <i class="fa fa-map-marker"></i>
+                             Indigo XP
+                        </p>
+                        <p class="info">
+                            <i class="fa fa-calendar"></i>
+                            February 6 | 8PM
+                       </p>
+
+                       <p class="info description">
+                        Tuesday Let's Party At: INDIGO XP with Bollywood & Punjabi Music
+                       </p>
+                    </div>
+                </div>
+                <button class="action" onclick="bookEvent('Talli Tuesday', 'February 6', '8PM', 'Rs 1300')">Book it</button>
+            </div>
+        </div>
+
+        <div class="item-container" id="ctwo">
+            <div class="img-container">
+                <img src="https://i.pinimg.com/474x/cd/95/b7/cd95b7c0ff7eac6efc4270232e1623a4.jpg">
+            </div>
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title">FriYAY Chic</p>
+                    <div class="seperator"></div>
+                    <p class="info" id="four">White field, Bengaluru</p>
+                    <div class="like">
+                        <p class="price" align="center">Free<i class='bx bx-heart' id="like3"></i>
+                            <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                    </div>
+
+                    <div class="additional-info">
+                        <p class="info">
+                             <i class="fa fa-map-marker"></i>
+                             Indigo XP
+                        </p>
+                        <p class="info">
+                            <i class="fa fa-calendar"></i>
+                            February 2 | 7PM 
+                       </p>
+
+                       <p class="info description">
+                        🎉 BigTree Entertainment presents FriYAY Chic Fanatics - Ladies & Models Bollywood Punjabi Music Night Extravaganza with DJ Prem Mittal
+                       </p>
+                    </div>
+                </div>
+                <button class="action" onclick="bookEvent('FriYAY Chic', 'February 2', '7PM', 'Rs 0')">Book it</button>
+            </div>
+        </div>
+
+        <div class="item-container" id="ctwo">
+            <div class="img-container">
+                <img src="https://i.pinimg.com/474x/a1/89/9a/a1899ab0476945a27a8b2d251d7f16c1.jpg" id="i5">
+            </div>
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title">Desi Thursday</p>
+                    <div class="seperator"></div>
+                    <p class="info" id="five">Koramangala, Bengaluru</p>
+                    <div class="like">
+                        <p class="price" align="center">Free<i class='bx bx-heart' id="like4"></i>
+                            <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                    </div>
+
+                    <div class="additional-info">
+                        <p class="info">
+                             <i class="fa fa-map-marker"></i>
+                             BLURRED
+                        </p>
+                        <p class="info">
+                            <i class="fa fa-calendar"></i>
+                            February 1 | 8PM
+                       </p>
+
+                       <p class="info description">
+                        Thursday Bollywood Ladies Night😍 The Biggest Bollywood & Punjabi Party..
+                       </p>
+                    </div>
+                </div>
+                <button class="action" onclick="bookEvent('Desi Thursday', 'February 1', '8PM', 'Rs 0')">Book it</button>
+            </div>
+        </div>
+
+        </div>
+        <div id="contact" class="conn" style="margin-top: -10px;padding-top: 10px;">
+        
+            <div class="con2">
+                <div style="margin-bottom: -20px;"><p align="center">Follow us on:</p></div><br>
+                <div class="con1">
+                    <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://twitter.com/?lang=en" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><i class='bx bxl-whatsapp' ></i></a>
+                </div>
+                
+            </div>
+            <p align="center">Mail us: eventorganiser@gmail.com</p>
+            <p align="center">Contact: 080-73424789</p><br>
+        </div>
+    </div>
+    <script>
+        let s=document.getElementById('search');
+        let one=document.getElementById('one').innerHTML;
+        let two=document.getElementById('two').innerHTML;
+        let three=document.getElementById('three').innerHTML;
+        let four=document.getElementById('four').innerHTML;
+        let five=document.getElementById('five').innerHTML;
+        document.getElementById("si").onclick = function() {
+            let search = document.getElementById("search");
+
+            if (search.style.width === "0px"||search.style.width === "") {
+                search.style.width = "450px";
+                search.style.background = "black";
+                search.style.padding = "13px 22px 13px 22px";
+            } else {
+                let v=s.value;
+                if(one.toLowerCase().includes(v.toLowerCase()) && v!="")
+                {
+                    location.href='#cone';
+                    document.getElementById('one').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(two.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#cone';
+                    document.getElementById('two').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(three.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#cone';
+                    document.getElementById('three').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(four.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#ctwo';
+                    document.getElementById('four').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(five.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#ctwo';
+                    document.getElementById('five').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else{
+                    v="";
+                    document.getElementById('nf').style.display="block";
+                    setTimeout(() => {
+                        document.getElementById('nf').style.display="none";
+                    }, 1300);
+                }
+            }
+        };
+        
+
+        document.getElementById("like").onclick=function(){
+            let i=document.getElementById("like");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i1");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'Friday Fiesta');
+            localStorage.setItem('eventDate', 'February 3');
+            localStorage.setItem('eventTime', '8PM ');
+            localStorage.setItem('eventPrice', 'Free');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        document.getElementById("like1").onclick=function(){
+            let i=document.getElementById("like1");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i2");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'House Party');
+            localStorage.setItem('eventDate', 'February 3');
+            localStorage.setItem('eventTime', '9PM ');
+            localStorage.setItem('eventPrice', 'Free');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        document.getElementById("like2").onclick=function(){
+            let i=document.getElementById("like2");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i3");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'Talli Tuesday');
+            localStorage.setItem('eventDate', 'February 6');
+            localStorage.setItem('eventTime', '8PM ');
+            localStorage.setItem('eventPrice', 'Rs 1300');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        document.getElementById("like3").onclick=function(){
+            let i=document.getElementById("like3");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i4");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'FriYAY Chic');
+            localStorage.setItem('eventDate', 'February 2');
+            localStorage.setItem('eventTime', '7PM ');
+            localStorage.setItem('eventPrice', 'Free');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        document.getElementById("like4").onclick=function(){
+            let i=document.getElementById("like4");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i5");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'Desi Thursday');
+            localStorage.setItem('eventDate', 'February 1');
+            localStorage.setItem('eventTime', '8PM ');
+            localStorage.setItem('eventPrice', 'Free');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        function bookEvent(title, date, time, price) {
+            localStorage.setItem('eventTitle', title);
+            localStorage.setItem('eventDate', date);
+            localStorage.setItem('eventTime', time);
+            localStorage.setItem('eventPrice', price);
+            window.location.href = 'booking.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="icon" href="logo.jpg">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+      </style>
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body background="flat_landscape__15____a_night_full_of_magic_by_vinsual998_dea7cc6-pre.png" style="background-repeat: no-repeat;background-size: cover;background-position: center;">
+    <div class="container" id="clickcon">
+        <a href="YM.html"><i class='bx bxs-home' id="homebtn"></i></a>
+        <a href="login.html"><i class='bx bx-arrow-back' id="homebtn" style="margin-left: -8px;font-size: 20px;font-weight: 900;"></i></i></a>
+        <div class="form-box">
+            <h1 id="title">Log In</h1>
+            <div class="avatar" id="avatar">
+                <div class="appear">
+                <div class="imguser"><img src="user-removebg-preview.png" alt="" width="90px" height="90px" id="user" align="center"></div>
+                <i class='bx bxs-message-square-edit' id="edit"></i>
+                </div>
+                <div class="notappear" id="notappear">
+                    <img src="none-removebg-preview.png" alt="" id="g1">
+                    <img src="girl2.jpg" alt="" id="g2">
+                    <img src="girl3.jpg" alt="" id="g3">
+                    <img src="girl4.jpg" alt="" id="g4">
+                    <img src="girl5.jpg" alt="" id="g5">
+                    <img src="girl6.jpg" alt="" id="g6">
+                    <img src="girl7.jpg" alt="" id="g7">
+                    <img src="girl8.jpg" alt="" id="g8">
+                    <img src="boy1.jpg" alt="" id="b1">
+                    <img src="boy2.jpg" alt="" id="b2">
+                    <img src="boy3.jpg" alt="" id="b3">
+                    <img src="boy4.jpg" alt="" id="b4">
+                    <img src="boy5.jpg" alt="" id="b5">
+                    <img src="boy6.jpg" alt="" id="b6">
+                    <img src="boy8.jpg" alt="" id="b8">
+                    <img src="boy9.jpg" alt=""  id="b9">
+                </div>
+            </div>
+            
+            <form action="/signup" method="post">
+                <div class="input-group" style="display: block;">
+                    <div class="input-field" id="name" style="display: none;">
+                        <input type="text" placeholder="Username" name="name"  id="in">
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <p id="err1" class="nameerr" align="left"></p>
+
+                    <div class="input-field" id="maildiv">
+                        <input type="text" placeholder="Email" name="mail"  id="mail">
+                <i class='bx bx-envelope'></i>
+                    </div>
+                    <p id="err2" class="mailerr" align="left"></p>
+
+                    <div class="input-field">
+                        <input type="password" placeholder="Password" id="password" name="password" >
+                        <img src="hide-regular-24 (1).png" width="17px" height="17px" id="eyeicon" >
+                    </div>
+                    <p id="err3" class="passerr" align="left"></p>
+                    <br><br>
+                    
+                </div>
+                <div class="btn">                    
+                    <input type="submit" class="btn2"  id="signup" value="Sign Up">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+            
+            document.getElementById("avatar").style.display="flex";
+            let eyeicon= document.getElementById("eyeicon");
+            let password= document.getElementById("password");
+
+            let signup=document.getElementById("signup");
+            let name=document.getElementById("name");
+            let names=document.getElementById("in");
+            let mail=document.getElementById("mail");
+            let title=document.getElementById("title");
+            name.style.display="block";
+            name.style.maxHeight="65px";
+            name.style.padding="12px 10px 12px 15px";
+            name.style.border="2px solid rgba(255,255,255,0.2)";
+            name.style.borderRadius="25px";
+            title.innerHTML="Sign Up";
+            signup.style.background="rgb(19, 129, 105)";
+            signup.style.border=" 1px rgb(19, 129, 105)";
+
+            eyeicon.onclick=
+            function eyeshow()
+            {
+                if (password.type=="password")
+                {
+                    password.type="text";
+                    eyeicon.src="show-regular-24 (1).png";
+                }
+                else
+                {
+                    password.type="password";
+                    eyeicon.src="hide-regular-24 (1).png";
+                }
+            }
+//if user existes
+            let maildiv=document.getElementById("maildiv");
+        mail.oninput=function(){
+        if(document.getElementById("mail").value!="")
+                {
+                    let m=document.getElementById("mail").value;
+                    const pa = /^[^\s@]+@(?:gmail\.com|bmsce\.ac(?:\.in)?)$/;
+                    if(!m.match(pa)){
+                    document.getElementById("err2").innerHTML="* Enter valid Email";
+                    document.getElementById("maildiv").style.border="2px solid rgb(255, 0, 0)";}
+                    else{
+                    document.getElementById("err2").innerHTML="";
+                    document.getElementById("maildiv").style.border="2px solid rgb(72, 255, 0)";}
+                }
+                else{
+                    document.getElementById("err2").innerHTML="";
+                }
+            }
+        
+        let mm=document.getElementById("maildiv");
+
+            
+        signup.addEventListener("click", function(event) {
+            event.preventDefault(); 
+
+            var imgElement = document.getElementById("user");
+                var imageUrl = imgElement.src;
+                localStorage.setItem('image_u1', imageUrl);
+            let namev=names.value;
+            let emailValue = mail.value;
+            password.type='text';
+            let passwordValue = password.value;
+            password.type='password';
+            if(document.getElementById("mail").value!="")
+                {
+                    let m=document.getElementById("mail").value;
+                    const pa=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+                    if(!m.match(pa)){
+                    document.getElementById("err2").innerHTML="* Enter valid Email";
+                    maildiv.style.border="2px solid rgb(255, 0, 0)";return false;
+                    }
+                    else{
+                    document.getElementById("err2").innerHTML="";
+                    maildiv.style.border="2px solid rgb(72, 255, 0)";
+                }}else if(document.getElementById("mail").value=="")
+                {
+                    document.getElementById("err2").innerHTML="* Email field is required";
+                    return false;
+                }
+                else{
+                    document.getElementById("err2").innerHTML="";
+                }
+                if(document.getElementById("in").value=="")
+                {
+                    document.getElementById("err1").innerHTML="* Username field is required";return false;
+                }
+                else{
+                    document.getElementById("err1").innerHTML="";
+                }
+                if(document.getElementById("password").value=="")
+                {
+                    document.getElementById("err3").innerHTML="* Password field is required";return false;
+                }
+                else{
+                    document.getElementById("err3").innerHTML="";
+                }
+                if(document.getElementById("in").value!="" && document.getElementById("err1").innerHTML=="" && document.getElementById("mail").value!="" && document.getElementById("err2").innerHTML=="" && document.getElementById("password").value!="" && document.getElementById("err3").innerHTML=="")
+                {
+                    fetch("/signup", {
+                        method: "POST",
+                        body: JSON.stringify({ name: namev, email: emailValue, password: passwordValue }),
+                        headers: {
+                            "Content-Type": "application/json"
+                        }
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            alert("Signup successful. Email sent successfully");
+                            alert("Welcome to Bengaluru Moments!")
+                            window.location.href = "login.html"; 
+                        } else {
+                            alert("Sign-up failed. Please try again.");
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error during sign-up:", error);
+                        alert("An error occurred. Please try again later.");
+                    });
+                }
+                
+            });
+
+        document.getElementById("edit").onclick=function(){
+            event.stopPropagation(); 
+            let a=document.getElementById("notappear");
+            a.style.display = (a.style.display === "block") ? "none" : "block";
+            if(a.style.display==="block"){
+            document.getElementById("g1").onclick=function(){
+                document.getElementById("user").src="user-removebg-preview.png";
+                document.getElementById("user").border="3px solid rgb(80, 79, 79)";
+            }
+            document.getElementById("g2").onclick=function(){
+                document.getElementById("user").src="girl2.jpg";
+                document.getElementById("user").border="3px solid white";
+            }
+            document.getElementById("g3").onclick=function(){
+                document.getElementById("user").src="girl3.jpg";
+                document.getElementById("user").border="3px solid white";
+            }
+            document.getElementById("g4").onclick=function(){
+                document.getElementById("user").src="girl4.jpg";
+                document.getElementById("user").border="3px solid white";
+            }
+            document.getElementById("g5").onclick=function(){
+                document.getElementById("user").src="girl5.jpg";
+                document.getElementById("user").border="3px solid white";
+            }
+            document.getElementById("g6").onclick=function(){
+                document.getElementById("user").src="girl6.jpg";
+                document.getElementById("user").border="3px solid white";
+            }
+            document.getElementById("g7").onclick=function(){
+                document.getElementById("user").src="girl7.jpg";
+                document.getElementById("user").border="3px solid white";
+            }
+            document.getElementById("g8").onclick=function(){
+                document.getElementById("user").src="girl8.jpg";
+                document.getElementById("user").border="3px solid white";
+            }
+            document.getElementById("b1").onclick=function(){
+                document.getElementById("user").src="boy1.jpg";
+                document.getElementById("user").border="3px solid white";
+            }
+            document.getElementById("b2").onclick=function(){
+                document.getElementById("user").src="boy2.jpg";
+                document.getElementById("user").border="3px solid white";
+            }
+            document.getElementById("b3").onclick=function(){
+                document.getElementById("user").src="boy3.jpg";
+                document.getElementById("user").border="3px solid white";
+            }
+            document.getElementById("b4").onclick=function(){
+                document.getElementById("user").src="boy4.jpg";
+                document.getElementById("user").border="3px solid white";
+            }
+            document.getElementById("b5").onclick=function(){
+                document.getElementById("user").src="boy5.jpg";
+                document.getElementById("user").border="3px solid white";
+            }
+            document.getElementById("b6").onclick=function(){
+                document.getElementById("user").src="boy6.jpg";
+                document.getElementById("user").border="3px solid white";
+            }
+            document.getElementById("b8").onclick=function(){
+                document.getElementById("user").src="boy8.jpg";
+                document.getElementById("user").border="3px solid white";
+            }
+            document.getElementById("b9").onclick=function(){
+                document.getElementById("user").src="boy9.jpg";
+                document.getElementById("user").border="3px solid white";
+            }
+            
+            document.addEventListener("click", function (event) {
+            var notappearDiv = document.getElementById("notappear");
+            var clickedElement = event.target;
+
+            if (clickedElement !== notappearDiv && !notappearDiv.contains(clickedElement)) {
+                notappearDiv.style.display = "none";
+            }
+        });
+        }
+            else{
+                a.style.display="none";
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password Page</title>
+    <link rel="icon" href="logo.jpg">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+      </style>
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body background="flat_landscape__15____a_night_full_of_magic_by_vinsual998_dea7cc6-pre.png" style="background-repeat: no-repeat;background-size: cover;background-position: center;">
+    <div class="container" id="clickcon">
+        <a href="YM.html"><i class='bx bxs-home' id="homebtn"></i></a>
+        <a href="login.html"><i class='bx bx-arrow-back' id="homebtn" style="margin-left: -8px;font-size: 20px;font-weight: 900;"></i></i></a>
+        <div class="form-box">
+            <h1 id="title">Forgot Password</h1>
+            
+            <form action="/forgot" method="post">
+                <div class="input-group">
+                    
+                    <div class="input-field" id="maildiv">
+                        <input type="mail" placeholder="Email" name="mail"  id="mail">
+                <i class='bx bx-envelope'></i>
+                    </div>
+                    <p id="err2" class="mailerr" align="left"></p>
+
+                    <div class="input-field">
+                        <input type="password" placeholder="Password" id="password" name="password" >
+                        <img src="hide-regular-24 (1).png" width="17px" height="17px" id="eyeicon" >
+                    </div>
+                    <p id="err3" class="passerr" align="left"></p>
+
+                    <div class="input-field" id="cf" style="display: block;">
+                        <input type="password" placeholder="Confirm Password" id="password1" name="cpassword" >
+                        <img src="hide-regular-24 (1).png" width="17px" height="17px" id="eyeicon1" >
+                    </div>
+                    <p id="err4" class="cpasserr" align="left"></p>
+                    
+                    
+                </div>
+                <div class="pro" style="display: block;"><input type="submit" id="proceed" value="Proceed"></div>
+                
+            </form>
+        </div>
+    </div>
+    
+    <script>
+            
+            let eyeicon= document.getElementById("eyeicon");
+            let password= document.getElementById("password");
+            
+            eyeicon.onclick=
+            function eyeshow()
+            {
+                if (password.type=="password")
+                {
+                    password.type="text";
+                    eyeicon.src="show-regular-24 (1).png";
+                }
+                else
+                {
+                    password.type="password";
+                    eyeicon.src="hide-regular-24 (1).png";
+                }
+            }
+
+            let eyeicon1= document.getElementById("eyeicon1");
+            let password1= document.getElementById("password1");
+            eyeicon1.onclick=
+            function eyeshow()
+            {
+                if (password1.type=="password")
+                {
+                    password1.type="text";
+                    eyeicon1.src="show-regular-24 (1).png";
+                }
+                else
+                {
+                    password1.type="password";
+                    eyeicon1.src="hide-regular-24 (1).png";
+                }
+            }
+        
+        let mail=document.getElementById("mail");
+            let cf=document.getElementById("cf");
+            document.getElementById("proceed").style.display="block";
+            cf.style.maxHeight="65px";
+            cf.style.border=" 2px solid rgba(255,255,255,0.2)";
+            cf.style.padding="12px 10px 12px 15px";
+        mail.oninput=function(){
+        if(document.getElementById("mail").value!="")
+                {
+                    let m=document.getElementById("mail").value;
+                    const pa = /^[^\s@]+@(?:gmail\.com|bmsce\.ac(?:\.in)?)$/;
+                    if(!m.match(pa)){
+                    document.getElementById("err2").innerHTML="* Enter valid Email";
+                    document.getElementById('maildiv').style.border="2px solid rgb(255, 0, 0)";}
+                    else{
+                    document.getElementById("err2").innerHTML="";
+                    document.getElementById('maildiv').style.border="2px solid rgb(72, 255, 0)";}
+                }
+                else{
+                    document.getElementById("err2").innerHTML="";
+                }
+            }
+            let mm=document.getElementById("maildiv");
+            
+        
+        
+        
+
+        document.getElementById("proceed").onclick=function(){
+            let emailValue = mail.value;
+            password.type='text';
+            let passwordValue = password.value;
+            password.type='password';
+            let cpassValue = document.getElementById('password1').value;
+                if(document.getElementById("password").value != document.getElementById("password1").value)
+                {
+                    document.getElementById("err4").innerHTML="* Passwords are not matching";
+                    cf.style.border="2px solid rgb(255, 0, 0)";
+                    if(document.getElementById("password1").value=="")
+                    {
+                    document.getElementById("err4").innerHTML="* Confirm Password field is required";
+                    cf.style.border="2px solid rgba(255,255,255,0.2)";
+                    }
+                    else{
+                        cf.style.border="2px solid rgb(255, 0, 0)";
+                    }
+                    return false;
+                }
+                else{
+                    if(document.getElementById("password1").value=="")
+                    {
+                    document.getElementById("err4").innerHTML="* Confirm Password field is required";
+                    cf.style.border="2px solid rgba(255,255,255,0.2)";return false;
+                    }
+                    else{
+                    document.getElementById("err4").innerHTML="";
+                    cf.style.border="2px solid rgb(72, 255, 0)";  
+                    }                                      
+                }
+                
+                if(document.getElementById("mail").value=="")
+                {
+                    document.getElementById("err2").innerHTML="* Email field is required";
+                    return false;
+                }
+                else{
+                    document.getElementById("err2").innerHTML="";
+                }
+                if(document.getElementById("password").value=="")
+                {
+                    document.getElementById("err3").innerHTML="* Password field is required";
+                    return false;
+                }
+                else{
+                    document.getElementById("err3").innerHTML="";
+                }
+                if(document.getElementById("password1").value!="" && document.getElementById("err4").innerHTML=="" && document.getElementById("mail").value!="" && document.getElementById("err2").innerHTML=="" && document.getElementById("password").value!="" && document.getElementById("err3").innerHTML=="")
+                {
+                    fetch("/forgot", {
+                    method: "POST",
+                    body: JSON.stringify({ email: emailValue, password: passwordValue }),
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('Response from backend:', data);
+                        if (data.message == "Password updated") {
+                            alert("Password Updated");
+                            setTimeout(()=>{
+                                location.href="login.html";
+                            },2000);
+                            
+                        } 
+                        else {
+                            alert("Failed to send request. Please try again later.");
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error during sign-in:", error);
+                    });
+                }              
+                             
+        }
+        
+        cf.oninput=function(){
+            if(document.getElementById("password").value != document.getElementById("password1").value)
+                {
+                    cf.style.border="2px solid rgb(255, 0, 0)";
+                }
+                else if(document.getElementById("password").value == document.getElementById("password1").value){
+                    cf.style.border="2px solid rgb(72, 255, 0)";
+                }
+                else{
+                    cf.style.border="2px solid rgba(255,255,255,0.2)";
+                }
+        }
+
+        
+    </script>
+
+</body>
+</html>

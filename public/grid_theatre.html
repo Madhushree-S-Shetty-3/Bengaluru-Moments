@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Theatre</title>
+        <link rel="icon" href="logo.jpg">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="./style1.css">
+    </head>
+<body>
+    <div class="image"> 
+        <img src="ac.jpg" alt="">  
+    </div>
+    <div class="home">
+        <a href="YM.html"><i class='bx bxs-home' id="homebtn"></i></a>
+    </div>
+    <div class="sea">
+        <input type="text" placeholder="Search..." id="search">
+        <i class='bx bx-search-alt' style="font-size: 30px;color: rgb(0, 0, 0);padding: 6px;" id="si"></i>
+        <a href="Liked.html"><i class='bx bxs-heart' style='color:#060606;margin-left: 10px;font-size: 30px;color: rgb(0, 0, 0);padding: 6px;'  id="si"></i></a>
+    </div>
+    
+    <div class="notfound" id="nf">
+        <span>Oops! Event not found...</span>
+    </div>
+    
+    <div class="con">
+        <div class="head">
+            <h1 align="center">Life's Script</h1>
+            <h5>Passionately Performed</h5>
+        </div>
+        <div class="container">
+        <div class="item-container" id="cone">
+            <div class="img-container">
+                <img src="https://res.cloudinary.com/dwzmsvp7f/image/fetch/q_75,f_auto,w_400/https%3A%2F%2Fmedia.insider.in%2Fimage%2Fupload%2Fc_crop%2Cg_custom%2Fv1706092181%2Ffspdzigyunm4gmycdlc3.png" alt="Event dance img" id="i1">
+            </div>
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title" id="one">An Indian Suite</p>
+                    <div class="seperator"></div>
+                    <p class="info">Sudhama Nagar, Bengaluru</p>
+                    <div class="like">
+                        <p class="price" align="center">Rs 300<i class='bx bx-heart' id="like" onclick="bookEvent('An Indian Suite', 'Thur, Feb 3', '5:00 PM', 'Rs 300')"></i>
+                            <i class='bx bxs-heart' style='color:#e81212;display: none;' id="liked1" ></i></p>
+                    </div>
+                    <div class="additional-info">
+                        <p class="info">
+                             <i class="fa fa-map-marker"></i>
+                             Shoonya - Centre for Art and Somatic Practices
+                        </p>
+                        <p class="info">
+                            <i class="fa fa-calendar"></i>
+                             Thur, Feb 3 , 5:00 PM 
+                       </p>
+
+                       <p class="info description">
+                        Writer, playwright, screenwriter and film director, Marguerite Duras (1914-1996) is one of the major figures in the French literary and artistic world. In her multiform corpus <span>more...</span>
+                       </p>
+                    </div>
+                </div>
+                <button class="action" onclick="bookEvent('An Indian Suite', 'Thur, Feb 3', '5:00 PM', 'Rs 300')">Book it</button>
+
+            </div>
+        </div>
+
+        <div class="item-container">
+            <div class="img-container">
+                <img src="https://res.cloudinary.com/dwzmsvp7f/image/fetch/q_75,f_auto,w_400/https%3A%2F%2Fmedia.insider.in%2Fimage%2Fupload%2Fc_crop%2Cg_custom%2Fv1705988109%2Fmuhxcb5ckan5i5iiazp3.jpg" id="i2">
+            </div>
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title" id="two">MOVEs WORKSHOP</p>
+                    <div class="seperator"></div>
+                    <p class="info">Hennur Gardens, Bengaluru</p>
+                    <div class="like">
+                        <p class="price" align="center">Rs 600<i class='bx bx-heart' id="like1"></i>
+                            <i class='bx bxs-heart' style='color:#e81212;display: none;' id="liked2" ></i></p>                        
+                    </div>
+                    <div class="additional-info">
+                        <p class="info">
+                             <i class="fa fa-map-marker"></i>
+                             Kana by Coffee Mechanics
+                        </p>
+                        <p class="info">
+                            <i class="fa fa-calendar"></i>
+                            January 31 | 6:30PM
+                       </p>
+
+                       <p class="info description">
+                        The workshop will explore the most basic idea of movement via the everyday, theatre based movement activities etc to explore movement in a fun, self-expressive <span>more...</span>
+                       </p>
+                    </div>
+                </div>
+                <button class="action" onclick="bookEvent('MOVEs WORKSHOP', 'January 31',' 6:30PM','Rs 600')">Book it</button>
+            </div>
+        </div>
+
+        <div class="item-container">
+            <div class="img-container">
+                <img  src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAzIEZlYiBvbndhcmRz,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00378386-vnhygrxdcy-portrait.jpg" id="i3">
+            </div>
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title" id="three">Improv</p>
+                    <div class="seperator"></div>
+                    <p class="info">Koramangala</p>
+                    <div class="like">
+                        <p class="price" align="center">Free<i class='bx bx-heart' id="like2"></i>
+                            <i class='bx bxs-heart' style='color:#e81212;display: none;' id="liked3" ></i></p>                        
+                    </div>
+
+                    <div class="additional-info">
+                        <p class="info">
+                             <i class="fa fa-map-marker"></i>
+                             Softspot
+                        </p>
+                        <p class="info">
+                            <i class="fa fa-calendar"></i>
+                             Sat, Feb 3 , 10:00 AM 
+                       </p>
+
+                       <p class="info description">
+                        Improvise, captivate, and Act on the Spot! A stage where spontaneity meets creativity, challenging you to deliver impromptu acting brilliance in just two minutes.
+                    </div>
+                </div>
+                <button class="action" onclick="bookEvent('Improv', 'Sat, Feb 3 , 10:00 AM','Rs 0')">Book it</button>
+            </div>
+        </div>
+
+        </div>
+        <div id="contact" class="conn" style="margin-top: -10px;padding-top: 10px;">
+        
+            <div class="con2">
+                <div style="margin-bottom: -20px;"><p align="center">Follow us on:</p></div><br>
+                <div class="con1">
+                    <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://twitter.com/?lang=en" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><i class='bx bxl-whatsapp' ></i></a>
+                </div>
+                
+            </div>
+            <p align="center">Mail us: eventorganiser@gmail.com</p>
+            <p align="center">Contact: 080-73424789</p><br>
+        </div>
+    </div>
+    <script>
+        let s=document.getElementById('search');
+        let one=document.getElementById('one').innerHTML;
+        let two=document.getElementById('two').innerHTML;
+        let three=document.getElementById('three').innerHTML;
+        document.getElementById("si").onclick = function() {
+            let search = document.getElementById("search");
+
+            if (search.style.width === "0px"||search.style.width === "") {
+                search.style.width = "450px";
+                search.style.background = "black";
+                search.style.padding = "13px 22px 13px 22px";
+            } else {
+                let v=s.value;
+                if(one.toLowerCase().includes(v.toLowerCase()) && v!="")
+                {
+                    location.href='#cone';
+                    document.getElementById('one').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(two.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#cone';
+                    document.getElementById('two').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(three.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#cone';
+                    document.getElementById('three').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else{
+                    v="";
+                    document.getElementById('nf').style.display="block";
+                    setTimeout(() => {
+                        document.getElementById('nf').style.display="none";
+                    }, 1300);
+                }
+            }
+        };
+        var a=1;
+        
+        document.getElementById("like").onclick=function(){
+            let i=document.getElementById("like");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i1");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'An Indian Suite');
+            localStorage.setItem('eventDate', 'Thur, Feb 3 ');
+            localStorage.setItem('eventTime', '5:00 PM ');
+            localStorage.setItem('eventPrice', 'Rs 300');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_theatre.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+            
+            }
+
+            else{
+                a=0;
+            i.className="bx bx-heart";
+            localStorage.setItem('eventTitle', 'An Indian Suite');
+            localStorage.setItem('eventDate', 'Thur, Feb 3 ');
+            localStorage.setItem('message', a);
+            i.style.color="#1f1f1f";}
+        }
+        document.getElementById("like1").onclick=function(){
+            let i=document.getElementById("like1");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i2");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'MOVEs WORKSHOP');
+            localStorage.setItem('eventDate', 'January 31');
+            localStorage.setItem('eventTime', '6:30 PM');
+            localStorage.setItem('eventPrice', 'Rs 600');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_theatre.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800);   
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);           
+            }
+            else{
+            i.className="bx bx-heart";
+            a=0;
+            i.className="bx bx-heart";
+            localStorage.setItem('eventTitle', 'An Indian Suite');
+            localStorage.setItem('eventDate', 'Thur, Feb 3 ');
+            localStorage.setItem('message', a);
+            i.style.color="#1f1f1f";}
+            }
+
+        document.getElementById("like2").onclick=function(){
+            let i=document.getElementById("like2");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i3");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'Improv');
+            localStorage.setItem('eventDate', 'Sat, Feb 3');
+            localStorage.setItem('eventTime', '10:00 AM ');
+            localStorage.setItem('eventPrice', 'Free');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_theatre.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800);   
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            a=0;
+            i.className="bx bx-heart";
+            localStorage.setItem('eventTitle', 'An Indian Suite');
+            localStorage.setItem('eventDate', 'Thur, Feb 3 ');
+            localStorage.setItem('message', a);
+            i.style.color="#1f1f1f";}
+        }
+        
+        function bookEvent(title, date, time, price) {
+            localStorage.setItem('eventTitle', title);
+            localStorage.setItem('eventDate', date);
+            localStorage.setItem('eventTime', time);
+            localStorage.setItem('eventPrice', price);
+            window.location.href = 'booking.html';
+        }
+
+    </script>
+</body>
+</html>

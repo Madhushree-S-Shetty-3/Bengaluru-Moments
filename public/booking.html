@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link rel="icon" href="logo.jpg">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body >
+    <div class="container">
+        <div class="left">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="i1.jpg" alt="Image 1"></div>
+                    <div class="swiper-slide"><img src="i2.jpg" alt="Image 2"></div>
+                    <div class="swiper-slide"><img src="i3.jpg" alt="Image 3"></div>
+                    <div class="swiper-slide"><img src="i4.jpg" alt="Image 4"></div>
+                    <div class="swiper-slide"><img src="i5.jpg" alt="Image 5"></div>
+                    <div class="swiper-slide"><img src="i6.jpg" alt="Image 6"></div>
+                    <div class="swiper-slide"><img src="i7.jpg" alt="Image 7"></div>
+                    <div class="swiper-slide"><img src="i8.jpg" alt="Image 8"></div>
+                    <div class="swiper-slide"><img src="i9.jpg" alt="Image 9"></div>
+                    <div class="swiper-slide"><img src="i10.jpg" alt="Image 10"></div>
+                    <div class="swiper-slide"><img src="i11.jpg" alt="Image 11"></div>
+                    <div class="swiper-slide"><img src="i12.jpg" alt="Image 12"></div>
+                    <div class="swiper-slide"><img src="i13.jpg" alt="Image 13"></div>
+                    <div class="swiper-slide"><img src="i14.jpg" alt="Image 14"></div>
+                    <div class="swiper-slide"><img src="i15.jpg" alt="Image 15"></div>
+                    <div class="swiper-slide"><img src="i16.jpg" alt="Image 16"></div>
+                    <div class="swiper-slide"><img src="i17.jpg" alt="Image 17"></div>
+                    <div class="swiper-slide"><img src="i18.jpg" alt="Image 18"></div>
+                    <div class="swiper-slide"><img src="i19.jpg" alt="Image 19"></div>
+                    <div class="swiper-slide"><img src="i20.jpg" alt="Image 20"></div>
+                    <div class="swiper-slide"><img src="i21.jpg" alt="Image 21"></div>
+                    <div class="swiper-slide"><img src="i22.jpg" alt="Image 22"></div>
+                    <div class="swiper-slide"><img src="i23.jpg" alt="Image 23"></div>
+                </div>
+            </div>
+        </div>
+        <div class="right" >
+            <div class="ticket">
+                <div class="dots">
+                    <div class="q"></div><div class="q"></div><div class="q"></div><div class="q"></div><div class="q"></div><div class="q"></div><div class="q"></div>
+                    <div class="q"></div><div class="q"></div><div class="q"></div>
+                    <div class="q"></div><div class="q"></div><div class="q"></div>
+                    <div class="q"></div><div class="q"></div><div class="q"></div>
+                    <div class="q"></div><div class="q"></div><div class="q"></div>
+                    <div class="q"></div><div class="q"></div><div class="q"></div>
+                </div>
+                
+                <div class="top">
+                    <h2 style="font-family: sans-serif;align-items: center;"> <img src="logo_zoom.png" alt="" width="40px" height="auto"> Book Your Tickets</h2>
+                    <div class="fl"><div class="eventname" id="eventTitle">Event</div>
+                    <div class="edate" ><p id="eventDate"></p> <br><div class="time"> <p id="eventTime"></p></div>
+                    </div>
+                </div><br>
+                    <div class="amt"><div class="h">Amount per ticket</div><div class="amount"> <p id="amt"> <strong style="font-weight: 700;" id="eventPrice"> 230</strong></p></div></div>
+                </div>
+                <div class="line"><div class="q1" style="margin-left: -190px;
+                margin-right: 10px;"></div>---------------------------------<div class="q1" style="margin-right: -190px;"></div></div>
+
+
+            <form action="/booking-form" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Name of the person booking ticket..." required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="mail" placeholder="Ticket receiving mail id..." id="email" name="email" required>
+                </div>
+                <div class="form-group1">
+                    <label for="quantity">Number of Tickets:</label>
+                    <i class='bx bx-minus' id="minus"></i>
+                    <p id="quantity" name="quantity"  style="background-color: transparent;">1</p>
+                    <i class='bx bx-plus' id="plus"></i>
+                </div>
+                <div class="sub" align="center">
+                    <div class="dot"><br>
+                        ......................................................................................................<br>
+                    </div><br>
+                    <div class="total">
+                        <div class="total">Total Amount payable</div>
+                        <div class="tamt">₹<p id="tamt"></p></div>
+                    </div>
+                <input type="submit" id="book" value="Book Now"></input>
+                </div>
+            </form>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+
+        let eventTitle = localStorage.getItem('eventTitle');
+        let eventDate = localStorage.getItem('eventDate');
+        let eventTime = localStorage.getItem('eventTime');
+        let eventPrice = localStorage.getItem('eventPrice');
+
+        document.getElementById('eventTitle').innerText = eventTitle;
+        document.getElementById('eventDate').innerText = eventDate;
+        document.getElementById('eventTime').innerText = eventTime;
+        document.getElementById('eventPrice').innerText = eventPrice;
+
+
+        let b = parseInt(document.getElementById('amt').innerText.substring(3));  
+        let c = parseInt(document.getElementById('quantity').innerText); 
+        document.getElementById('tamt').innerText = b * c; 
+        let a=1;
+
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            autoplay: {
+                delay: 1500,
+            },
+        });
+        
+        let p=document.getElementById('plus');
+        let m=document.getElementById('minus');
+        p.onclick=function()
+        {   a++;
+           document.getElementById('quantity').innerHTML=a;
+           let b = parseInt(document.getElementById('amt').innerText.substring(3)); 
+        let c = parseInt(document.getElementById('quantity').innerText); 
+        document.getElementById('tamt').innerText = b * c;
+        }
+        m.onclick=function()
+        {   a--;
+           document.getElementById('quantity').innerHTML=a;
+           let b = parseInt(document.getElementById('amt').innerText.substring(3)); 
+        let c = parseInt(document.getElementById('quantity').innerText); 
+        document.getElementById('tamt').innerText = b * c;
+           if(a<1){
+           document.getElementById('quantity').innerHTML=1;
+           document.getElementById('tamt').innerText =b;
+           }
+        }
+        
+        
+        
+        document.getElementById('book').onclick=function(){
+            let q=document.getElementById('quantity').innerHTML;
+            bookEvent(eventPrice,q);
+            let mail_user=document.getElementById('email').value;
+            localStorage.setItem('email', mail_user);            
+        }
+        function bookEvent(price,q) {
+            localStorage.setItem('eventPrice', price);
+            localStorage.setItem('quant', q);
+            window.location.href = 'payment.html';
+        }
+
+
+        
+    </script>
+</body>
+</html>
