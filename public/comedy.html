@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comedy</title>
+    <link rel="icon" href="logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./style1.css">
+</head>
+<body>
+    
+    <div class="image"> 
+        <img src="https://www.parati.com.ar/wp-content/uploads/2017/12/parati-estar-mejor-stand-up.jpg" alt="">  
+    </div>
+    <div class="home">
+        <a href="YM.html"><i class='bx bxs-home' id="homebtn"></i></a>
+    </div>
+    <div class="sea">
+        <input type="text" placeholder="Search..." id="search">
+        <i class='bx bx-search-alt' style="font-size: 30px;color: rgb(0, 0, 0);padding: 6px;" id="si"></i>
+        <a href="Liked.html"><i class='bx bxs-heart' style='color:#060606;margin-left: 10px;font-size: 30px;color: rgb(0, 0, 0);padding: 6px;'  id="si"></i></a>
+    </div>
+    <div class="notfound" id="nf">
+        <span>Oops! Event not found...</span>
+    </div>
+    
+    <div class="con">
+        <div class="head">
+            <h1 align="center">Comedy Shows</h1>
+            <h5>A day without laughter is a day wasted</h5>
+        </div>
+        <div class="container" style="display: block;">
+            <br><br>
+            <h1 align="center" style="color: rgb(85, 85, 85);font-size: 40px;font-weight: 800;">Oops !</h1><br>
+            <h3 align="center" style="color: rgb(85, 85, 85);">No events found</h3>
+            <h5 align="center" style="color: rgb(85, 85, 85);">Watch this space for upcoming events or <a href="try.html" style="font-style: italic;color: rgb(176, 24, 50);font-weight: lighter;">List your event now</a></h5>
+            <br><br><br><br><br><br><br><br>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <div id="contact" class="conn" style="margin-top: -10px;padding-top: 10px;">
+        
+            <div class="con2">
+                <div style="margin-bottom: -20px;"><p align="center">Follow us on:</p></div><br>
+                <div class="con1">
+                    <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://twitter.com/?lang=en" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><i class='bx bxl-whatsapp' ></i></a>
+                </div>
+                
+            </div>
+            <p align="center">Mail us: eventorganiser@gmail.com</p>
+            <p align="center">Contact: 080-73424789</p><br>
+        </div>
+    </div>
+    
+    
+    <script>
+         document.getElementById("si").onclick = function() {
+            let search = document.getElementById("search");
+
+            if (search.style.width === "0px"||search.style.width === "") {
+                search.style.width = "450px";
+                search.style.background = "black";
+                search.style.padding = "13px 22px 13px 22px";
+            } else{
+                    v="";
+                    document.getElementById('nf').style.display="block";
+                    setTimeout(() => {
+                        document.getElementById('nf').style.display="none";
+                    }, 1300);
+                }
+            
+        };
+    </script>
+</body>
+</html>

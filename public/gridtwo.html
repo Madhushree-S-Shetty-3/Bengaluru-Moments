@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Music</title>
+        <link rel="icon" href="logo.jpg">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="./style1.css">
+    </head>
+<body>
+    <div class="image"> 
+        <img src="m1.jpg" alt="" style="margin-top: -60px;">  
+    </div>
+    <div class="home">
+        <a href="YM.html"><i class='bx bxs-home' id="homebtn"></i></a>
+    </div>
+    <div class="sea">
+        <form action="">
+        <input type="text" placeholder="Search..." id="search">
+    
+        <i class='bx bx-search-alt' style="font-size: 30px;color: rgb(0, 0, 0);padding: 6px;" id="si"></i>
+        <a href="Liked.html"><i class='bx bxs-heart' style='color:#060606;margin-left: 10px;font-size: 30px;color: rgb(0, 0, 0);padding: 6px;'  id="si"></i></a></form>
+    </div>
+    <div class="notfound" id="nf">
+        <span>Oops! Event not found...</span>
+    </div>
+
+    <div class="share">
+        <div class="share1">
+
+        </div>
+    </div>
+    
+    <div class="con">
+        <div class="head">
+            <h1 align="center">MUSIC : </h1>
+            <h5 align="center">The universal language of emotions</h5>
+        </div>
+
+        <div class="container" id="cone">
+        <div class="item-container">
+            <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bXVzaWMlMjBldmVudHxlbnwwfHwwfHx8MA%3D%3D" id="i1" alt="Event dance img">
+            </div>
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info" >
+                    <p class="title" id="one">Darshan Raval </p>
+                    <div class="seperator"></div>
+                    <p class="info">Bengaluru</p>
+                    <div class="like">
+                        <p class="price" align="center">Rs 499<i class='bx bx-heart' id="like" ></i>
+                            <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i>
+                        </p>
+                    </div>
+
+                    <div class="additional-info">
+                        <p class="info">
+                             <i class="fa fa-map-marker"></i>
+                             To be announced
+                        </p>
+                        <p class="info">
+                            <i class="fa fa-calendar"></i>
+                            March 16 | Gates Open at 5PM
+                       </p>
+
+                       <p class="info description">
+                        This extraordinary concert series promises to be a celebration of love, emotions, and the magic of Darshan Raval's soulful voice.
+                       </p>
+                    </div>
+                </div>
+                <button class="action" onclick="bookEvent('Darshan Raval', 'March 16', '5PM', 'Rs 499')">Book it</button>
+            </div>
+        </div>
+
+        <div class="item-container">
+            <div class="img-container">
+                <img src="https://i.pinimg.com/474x/4c/dc/d5/4cdcd5f29a4a8a620dab2e7282361308.jpg" id="i2">
+            </div>
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title" id="two">U1's Long Drive</p>
+                    <div class="seperator"></div>
+                    <p class="info">Koramangala, Bengaluru</p>
+                    <div class="like">
+                        <p class="price" align="center">Rs 999<i class='bx bx-heart' id="like1"></i>
+                            <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                    </div>
+
+                    <div class="additional-info">
+                        <p class="info">
+                             <i class="fa fa-map-marker"></i>
+                             Chamara Vajra
+                        </p>
+                        <p class="info">
+                            <i class="fa fa-calendar"></i>
+                            March 9 | 6:30PM Onwards
+                       </p>
+
+                       <p class="info description">
+                        Come let's get Yuvanfied together & experience the magic in live with the music we enjoy the most with one and only Yuvan Shankar Raaja. <span>more...</span>
+                       </p>
+                    </div>
+                </div>
+                <button class="action" onclick="bookEvent('U1\'s Long Drive', 'March 9', '6:30PM', 'Rs 999')">Book it</button>
+            </div>
+        </div>
+
+        <div class="item-container">
+            <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1569261104015-eb08d17e62dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8&w=1000&q=80" id="i3">
+            </div>
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title" id="three">Tribute Linkin Park</p>
+                    <div class="seperator"></div>
+                    <p class="info">Koramangala, Bengaluru</p>
+                    <div class="like">
+                        <p class="price" align="center">Rs 299<i class='bx bx-heart' id="like2"></i>
+                            <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                    </div>
+
+                    <div class="additional-info">
+                        <p class="info">
+                             <i class="fa fa-map-marker"></i>
+                             100 ft road, Gilly's Redefined
+                        </p>
+                        <p class="info">
+                            <i class="fa fa-calendar"></i>
+                            February 10 | 8 PM
+                       </p>
+
+                       <p class="info description">
+                        Get ready to witness a power packed 2 hour tribute to Linkin Park as Anthracite is all set to perform all the hits and some deep cuts! 
+                       </p>
+                    </div>
+                </div>
+                <button class="action" onclick="bookEvent('Tribute Linkin Park', 'February 10', '8PM', 'Rs 299')">Book it</button>
+            </div>
+        </div>
+
+        <div class="item-container" id="ctwo">
+            <div class="img-container">
+                <img src="https://media.istockphoto.com/id/1199243596/photo/concert-stage-on-rock-festival-music-instruments-silhouettes.jpg?s=612x612&w=0&k=20&c=BNqLID7OXEA9SI0znQNQ2K9ywQ0vdVL_0Pf0piOH8I4=" id="i4">
+            </div>
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title" id="four">RAGE FT ANA LILIA </p>
+                    <div class="seperator"></div>
+                    <p class="info">Ashok nagar, Bengaluru</p>
+                    <div class="like">
+                        <p class="price" align="center">Free<i class='bx bx-heart' id="like3"></i>
+                            <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                    </div>
+
+                    <div class="additional-info">
+                        <p class="info">
+                             <i class="fa fa-map-marker"></i>
+                             Raahi Neo Kitchen & Bar
+                        </p>
+                        <p class="info">
+                            <i class="fa fa-calendar"></i>
+                            February 3 | 7PM
+                       </p>
+
+                       <p class="info description">
+                        A project that promises to revolutionize your sensory experience and transform your nights beyond imagination
+                       </p>
+                    </div>
+                </div>
+                <button class="action" onclick="bookEvent('RAGE FT ANA LILIA', 'February 3', '7PM', 'Free')">Book it</button>
+            </div>
+        </div>
+
+   
+        <div class="item-container"  id="ctwo">
+            <div class="img-container">
+                <img src="https://i.pinimg.com/474x/5e/df/93/5edf93fc3b72482bf418e9222c75d2d7.jpg" id="i5">
+            </div>
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title" id="five">ASTRALxYUHTEEN</p>
+                    <div class="seperator"></div>
+                    <p class="info">Mg road, Bengaluru</p>
+                    <div class="like">
+                        <p class="price" align="center">Rs 399<i class='bx bx-heart' id="like4"></i>
+                            <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                    </div>
+
+                    <div class="additional-info">
+                        <p class="info">
+                             <i class="fa fa-map-marker"></i>
+                             Hyatt Centric
+                        </p>
+                        <p class="info">
+                            <i class="fa fa-calendar"></i>
+                            February 2 | 6PM
+                       </p>
+
+                       <p class="info description">
+                        ASTRAL X YUHTEEN PRODUCTION Presents "HEAT"
+                       </p>
+                    </div>
+                </div>
+                <button class="action" onclick="bookEvent('ASTRALxYUHTEEN', 'February 2', '6PM', 'Rs 399')">Book it</button>
+            </div>
+        </div>
+
+        <div class="item-container" id="ctwo">
+            <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1565035010268-a3816f98589a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvbmNlcnR8ZW58MHx8MHx8fDA%3D" id="i6">
+            </div>
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title" id="six">Glass Beams</p>
+                    <div class="seperator"></div>
+                    <p class="info">Koramangala, Bengaluru</p>
+                    <div class="like">
+                        <p class="price" align="center">Rs 599<i class='bx bx-heart' id="like5"></i>
+                            <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                    </div>
+
+                    <div class="additional-info">
+                        <p class="info">
+                             <i class="fa fa-map-marker"></i>
+                             100ft road, Gilly's Redefined
+                        </p>
+                        <p class="info">
+                            <i class="fa fa-calendar"></i>
+                            February 3 | 8 PM
+                       </p>
+
+                       <p class="info description">
+                        Introducing 'Around India' - our humble effort to tour amazing bands across India!
+                       </p>
+                    </div>
+                </div>
+                <button class="action" onclick="bookEvent('Glass Beams', 'February 3', '8PM', 'Rs 599')">Book it</button>
+            </div>
+        </div>
+        </div>
+
+        <div id="contact" class="conn" style="margin-top: -10px;padding-top: 10px;">
+        
+            <div class="con2">
+                <div style="margin-bottom: -20px;"><p align="center">Follow us on:</p></div><br>
+                <div class="con1">
+                    <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://twitter.com/?lang=en" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><i class='bx bxl-whatsapp' ></i></a>
+                </div>
+                
+            </div>
+            <p align="center">Mail us: eventorganiser@gmail.com</p>
+            <p align="center">Contact: 080-73424789</p><br>
+        </div>
+    </div>
+
+    <script>
+        let s=document.getElementById('search');
+        let one=document.getElementById('one').innerHTML;
+        let two=document.getElementById('two').innerHTML;
+        let three=document.getElementById('three').innerHTML;
+        let four=document.getElementById('four').innerHTML;
+        let five=document.getElementById('five').innerHTML;
+        let six=document.getElementById('six').innerHTML;
+        document.getElementById("si").onclick = function() {
+            let search = document.getElementById("search");
+
+            if (search.style.width === "0px"||search.style.width === "") {
+                search.style.width = "450px";
+                search.style.background = "black";
+                search.style.padding = "13px 22px 13px 22px";
+            } else {
+                let v=s.value;
+                if(one.toLowerCase().includes(v.toLowerCase()) && v!="")
+                {
+                    location.href='#cone';
+                    document.getElementById('one').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(two.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#cone';
+                    document.getElementById('two').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(three.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#cone';
+                    document.getElementById('three').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(four.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#ctwo';
+                    document.getElementById('four').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(five.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#ctwo';
+                    document.getElementById('five').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(six.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#ctwo';
+                    document.getElementById('six').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else{
+                    v="";
+                    document.getElementById('nf').style.display="block";
+                    setTimeout(() => {
+                        document.getElementById('nf').style.display="none";
+                    }, 1300);
+                }
+            }
+        };
+        document.getElementById("like").onclick=function(){
+            let i=document.getElementById("like");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i1");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'Darshan Raval');
+            localStorage.setItem('eventDate', ' March 16');
+            localStorage.setItem('eventTime', 'Gates Open at 5PM ');
+            localStorage.setItem('eventPrice', 'Rs 499');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        document.getElementById("like1").onclick=function(){
+            let i=document.getElementById("like1");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i2");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'U1\'s Long Drive');
+            localStorage.setItem('eventDate', 'March 9');
+            localStorage.setItem('eventTime', '6:30PM Onwards');
+            localStorage.setItem('eventPrice', 'Rs 999');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        document.getElementById("like2").onclick=function(){
+            let i=document.getElementById("like2");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i3");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'Tribute Linkin Park');
+            localStorage.setItem('eventDate', 'February 10');
+            localStorage.setItem('eventTime', '8PM ');
+            localStorage.setItem('eventPrice', 'Rs 299');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        document.getElementById("like3").onclick=function(){
+            let i=document.getElementById("like3");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i4");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'RAGE FT ANA LILIA');
+            localStorage.setItem('eventDate', 'February 3');
+            localStorage.setItem('eventTime', '7PM ');
+            localStorage.setItem('eventPrice', 'Free');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        document.getElementById("like4").onclick=function(){
+            let i=document.getElementById("like4");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i5");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'ASTRALxYUHTEEN');
+            localStorage.setItem('eventDate', 'February 2');
+            localStorage.setItem('eventTime', '6PM ');
+            localStorage.setItem('eventPrice', 'Rs 399');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        document.getElementById("like5").onclick=function(){
+            let i=document.getElementById("like5");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i6");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'Glass Beams');
+            localStorage.setItem('eventDate', 'February 3');
+            localStorage.setItem('eventTime', '8PM ');
+            localStorage.setItem('eventPrice', 'Rs 599');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+
+        function bookEvent(title, date, time, price) {
+            localStorage.setItem('eventTitle', title);
+            localStorage.setItem('eventDate', date);
+            localStorage.setItem('eventTime', time);
+            localStorage.setItem('eventPrice', price);
+            window.location.href = 'booking.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+body{
+    background-color: rgb(0, 0, 0);
+    color: antiquewhite;
+    margin: 0%;
+}
+html{
+    scroll-behavior:smooth;
+}
+nav{
+    box-shadow: 1px 2px 40px 2px rgb(255, 255, 255);
+}
+.head{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 35px;
+    box-shadow: 1px 2px 40px 2px rgb(0, 0, 0);
+}
+.head a{
+    color: antiquewhite;
+    text-decoration: none;
+}
+.head .logo{
+    padding-top: 5px;
+    transform: translateX(-920px);
+}
+#search{
+    border: 0px;
+    border-radius: 30px;
+    outline: none;
+    width: 0px;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    padding: 0px;
+    overflow: hidden;
+    transition: (width,padding);
+    transition-duration: 0.5s;
+}
+@keyframes rotate {
+    0%{transform: rotate(360deg);}
+}
+.head i:hover{
+    cursor: pointer;
+    transform: rotate(360deg);
+}
+.head i{
+    cursor: pointer;
+}
+#search ::placeholder{
+    color: grey;
+}
+.home{
+    padding: 25px;
+    font-size: 16px;
+    font-family:'Lato', sans-serif;
+}
+.event{
+    padding: 25px;
+    font-size: 16px;
+    font-family:'Lato', sans-serif;
+}
+.mybook{
+    padding: 25px;
+    font-size: 16px;
+    font-family:'Lato', sans-serif;
+}
+.contact{
+    padding: 25px;
+    font-size: 16px;
+    font-family:'Lato', sans-serif;
+}
+.login{
+    margin: 25px;
+}
+.login{
+    border-radius: 50%;
+}
+.login i{
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    padding-left: 2px;
+    border: 2px solid whitesmoke;
+    border-radius: 50%;
+}
+.home:hover{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-shadow: 0px 1px 30px whitesmoke;
+    text-decoration-color: rgb(4, 83, 107) ;
+    text-decoration-thickness: 2px;
+}
+.event:hover{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-shadow: 0px 1px 30px whitesmoke;
+    text-decoration-color: rgb(4, 83, 107) ;
+    text-decoration-thickness: 2px;
+}
+.mybook:hover{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-shadow: 0px 1px 30px whitesmoke;
+    text-decoration-color: rgb(4, 83, 107) ;
+    text-decoration-thickness: 2px;
+}
+.contact:hover{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-shadow: 0px 1px 30px whitesmoke;
+    text-decoration-color: rgb(4, 83, 107) ;
+    text-decoration-thickness: 2px;
+}
+.login:hover{
+    box-shadow: 0px 10px 190px 100px rgb(19, 129, 105);
+    border: none;
+}
+.homebody img{
+    background-image: linear-gradient(rgb(0, 0, 0),rgba(0, 0, 0, 0.277));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -20;
+}
+@keyframes cursor {
+    50%{border-color:transparent;}
+}
+@keyframes typing {
+    from{width:0;transform: translateX(-500px);}
+}
+.q{
+    display: inline-block;
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    line-height: 1;
+    margin: 0;
+    padding:20px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(128, 128, 128, 0.141);
+}
+.q .text{
+    font-size: 90px;line-height: 100px;
+    padding-bottom: 2px;
+    margin-bottom: 2px;
+    width: 100%;height: 100%;
+    font-weight: 700;
+    font-family: 'Roboto Condensed',sans-serif;
+    color: antiquewhite;
+    white-space: nowrap;
+    overflow: hidden;
+        animation: typing 2s alternate,
+        cursor .4s step-end infinite alternate;
+}
+.q .text1{
+    font-size: 70px;line-height: 1;
+    margin-bottom: 2px;
+    width: 100%;height: 100%;
+    font-style: italic;
+    color: rgb(135, 131, 131);
+    font-weight: 200;
+    letter-spacing: -5px;
+    font-family: 'Roboto Condensed',sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+        animation: typing 2s 3 alternate,
+        cursor .4s step-end infinite alternate;
+}
+.eventslist{
+    background-color: #181818e9;
+    position: relative;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.eventslist .lmusic{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.614),rgba(0, 0, 0, 0.277));
+    margin:50px 80px 50px 80px;
+    width: 200px;
+    height: 300px;
+    background-color: rgb(27, 27, 27);
+    box-shadow: 16px 14px 20px #000000a8;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+@keyframes rotate {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+.row1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: -2px;
+}
+.row2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.lmusic h1{
+    align-content: center;
+    justify-content: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+@keyframes bor {
+    0%{border-top: 2px solid white;}
+    25%{border-right: 2px solid white;}
+    50%{border-bottom: 2px solid white;}
+    100%{border-left: 2px solid white;}
+}
+.lmusic:hover{
+    overflow: hidden;
+    animation: bor 2s ease-in-out ;
+    font-size: 18px;
+    text-shadow: 4px 4px 3px black;
+    align-items: flex-start;
+    cursor: pointer;
+}
+.con{
+    background-color: rgb(9, 9, 9);
+    position: relative;
+    top: 100%;
+    justify-content: center;
+}
+.con1{
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.con1 i{
+    padding: 40px;
+    color: antiquewhite;
+}
+.con1 i:hover{
+    font-size: 35px;
+}
+.con p{
+    color: rgb(75, 74, 74);
+    font-size: 11px;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    align-items: center;
+}

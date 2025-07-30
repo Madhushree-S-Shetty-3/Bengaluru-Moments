@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dance</title>
+        <link rel="icon" href="logo.jpg">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="./style1.css">
+    </head>
+<body>
+    <div class="image"> 
+        <img src="d1.jpg" alt="" style="height: 800px;margin-top: -90pxpx;">  
+    </div>
+    <div class="home">
+        <a href="YM.html"><i class='bx bxs-home' id="homebtn"></i></a>
+    </div>
+    <div class="sea">
+        <input type="text" placeholder="Search..." id="search" style="background-color: grey;">
+        <i class='bx bx-search-alt' style="font-size: 30px;color: rgb(0, 0, 0);padding: 6px;" id="si"></i>
+        <a href="Liked.html"><i class='bx bxs-heart' style='color:#060606;margin-left: 10px;font-size: 30px;color: rgb(0, 0, 0);padding: 6px;'  id="si"></i></a>
+    </div>
+
+    <div class="notfound" id="nf">
+        <span>Oops! Event not found...</span>
+    </div>
+    
+    <div class="con">
+        <div class="head">
+            <h1 align="center">In the DANCE of Life</h1>
+            <h5 align="center">Every step is a celebration</h5>
+        </div>
+
+        <div class="container"  id="cone">
+        <div class="item-container">
+            <div class="img-container">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/poster/q/d/q/small-spos8912-poster-bharatnatyam-classical-dance-digital-art-original-imaghs5mufbgkaj8.jpeg?q=90&crop=false">
+
+            </div>
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title"  id="one">Margam Malargal</p>
+                    <div class="seperator"></div>
+                    <p class="info">Mg road, Bengaluru</p>
+                    <div class="like">
+                        <p class="price" align="center">Rs 299<i class='bx bx-heart' id="like"></i>
+                            <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                    </div>
+
+                    <div class="additional-info">
+                        <p class="info">
+                             <i class="fa fa-map-marker"></i>
+                             Shoonya - Centre for Art
+                        </p>
+                        <p class="info">
+                            <i class="fa fa-calendar"></i>
+                            February 9 | 7PM
+                       </p>
+
+                       <p class="info description">
+                        In this Bharatanatyam recital, Varsha would be presenting a traditional margam that has a combination of rhythmic textures and beats flowing smoothly into abhinaya
+                       </p>
+                    </div>
+                </div>
+                <button class="action" onclick="bookEvent('Margam Malargal', 'February 9', '7PM', 'Rs 299')">Book it</button>
+            </div>
+        </div>
+
+        <div class="item-container">
+            <div class="img-container">
+                <img src="https://img.freepik.com/free-photo/dynamic-portrait-young-man-woman-dancing-hiphop-isolated-black-background-with-mixed-lights-effect_155003-46269.jpg" id="i2" alt="Event dance img">
+
+            </div>
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title" id="two">Hip Hop Dance</p>
+                    <div class="seperator"></div>
+                    <p class="info">Vasanth nagar, Bengaluru</p>
+                    <div class="like">
+                        <p class="price" align="center">Rs 5500<i class='bx bx-heart' id="like1"></i>
+                            <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                    </div>
+
+                    <div class="additional-info">
+                        <p class="info">
+                             <i class="fa fa-map-marker"></i>
+                             Connect Ventures
+                        </p>
+                        <p class="info">
+                            <i class="fa fa-calendar"></i>
+                            February 3 | 1:30PM
+                       </p>
+
+                       <p class="info description">
+                        Dive into the dynamic world of urban dance and unleash your creativity to the beats of hip-hop music. 
+                       </p>
+                    </div>
+                </div>
+                <button class="action" onclick="bookEvent('Hip Hop Dance', 'February 3', '1:30PM', 'Rs 5500')">Book it</button>
+            </div>
+        </div>
+
+        <div class="item-container">
+            <div class="img-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrhCs0uZYrQgNXapNot-SgZ8n5InpqzqQMqA&usqp=CAU" id="i3">
+            </div>
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title" id="three">West Coast Swing</p>
+                    <div class="seperator"></div>
+                    <p class="info">Indiranagar, Bengaluru</p>
+                    <div class="like">
+                        <p class="price" align="center">Rs 4500<i class='bx bx-heart' id="like2"></i>
+                            <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                    </div>
+
+                    <div class="additional-info">
+                        <p class="info">
+                             <i class="fa fa-map-marker"></i>
+                             LVDS
+                        </p>
+                        <p class="info">
+                            <i class="fa fa-calendar"></i>
+                            February 4 | 5PM
+                       </p>
+
+                       <p class="info description">
+                        We are proud to offer this unique West Coast Swing dance style, which originated in the United States in the 1940s, to our students in Bangalore.
+                       </p>
+                    </div>
+                </div>
+                <button class="action" onclick="bookEvent('West Coast Swing', 'February 4', '5PM', 'Rs 4500')">Book it</button>
+            </div>
+        </div>
+
+        <div class="item-container" id="ctwo">
+            <div class="img-container">
+                <img src="https://i.pinimg.com/736x/04/e7/9f/04e79fe31af7495efc623f37a487843a.jpg" id="i4">
+            </div>
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title" id="four">The First Dance </p>
+                    <div class="seperator"></div>
+                    <p class="info">Mekhri circle, Bengaluru</p>
+                    <div class="like">
+                        <p class="price" align="center">Rs 34499<i class='bx bx-heart' id="like3"></i>
+                            <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                    </div>
+
+                    <div class="additional-info">
+                        <p class="info">
+                             <i class="fa fa-map-marker"></i>
+                             Bengaluru palace grounds
+                        </p>
+                        <p class="info">
+                            <i class="fa fa-calendar"></i>
+                            November 27 | 11AM 
+                       </p>
+
+                       <p class="info description">
+                        Planning your dream wedding? Make it even more special with LVDS, India`s leading dance and entertainment company!
+                       </p>
+                    </div>
+                </div>
+                <button class="action" onclick="bookEvent('The First Dance', 'November 27', '11AM', 'Rs 34499')">Book it</button>
+            </div>
+        </div>
+
+        <div class="item-container" id="ctwo">
+            <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFuY2UlMjBwb3NlfGVufDB8fDB8fHww" id="i5">
+            </div>
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title" id="five">Salsa Dance</p>
+                    <div class="seperator"></div>
+                    <p class="info">Vasanth nagar</p>
+                    <div class="like">
+                        <p class="price" align="center">Rs 7459<i class='bx bx-heart' id="like4"></i>
+                            <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                    </div>
+
+                    <div class="additional-info">
+                        <p class="info">
+                             <i class="fa fa-map-marker"></i>
+                             Connect Ventures,
+                        </p>
+                        <p class="info">
+                            <i class="fa fa-calendar"></i>
+                            February 3 | 2:30PM 
+                       </p>
+
+                       <p class="info description">
+                        We are the first dance studio to bring Salsa to India. Our dance classes are reputed for providing the best quality Salsa dance lessons in the country.
+                       </p>
+                    </div>
+                </div>
+                <button class="action" onclick="bookEvent('Salsa Dance', 'February 3', '2:30PM', 'Rs 7459')">Book it</button>
+            </div>
+        </div>
+
+        <div class="item-container">
+            <div class="img-container">
+                <img src="https://e0.pxfuel.com/wallpapers/41/170/desktop-wallpaper-beautiful-dance-hip-hop-dance-dance-background-hip-hop-dancing.jpg" id="i6">
+            </div>
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info" id="ctwo">
+                    <p class="title" id="six">Bollywood Dance</p>
+                    <div class="seperator"></div>
+                    <p class="info">Jayanagar, Bengaluru</p>
+                    <div class="like">
+                        <p class="price" align="center">Rs 7500<i class='bx bx-heart' id="like5"></i>
+                            <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                    </div>
+
+                    <div class="additional-info">
+                        <p class="info">
+                             <i class="fa fa-map-marker"></i>
+                             Connect Ventures
+                        </p>
+                        <p class="info">
+                            <i class="fa fa-calendar"></i>
+                            February 1 | 7PM
+                       </p>
+
+                       <p class="info description">
+                        Whether you're a seasoned dancer or a beginner, our expert instructors will teach you the moves, expressions, and style that define Bollywood dance.
+                       </p>
+                    </div>
+                </div>
+                <button class="action" onclick="bookEvent('Bollywood Dance', 'February 1', '7PM', 'Rs 7500')">Book it</button>
+            </div>
+        </div>
+
+      
+        </div>
+        <div id="contact" class="conn" style="margin-top: -10px;padding-top: 10px;">
+        
+            <div class="con2">
+                <div style="margin-bottom: -20px;"><p align="center">Follow us on:</p></div><br>
+                <div class="con1">
+                    <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://twitter.com/?lang=en" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><i class='bx bxl-whatsapp' ></i></a>
+                </div>
+                
+            </div>
+            <p align="center">Mail us: eventorganiser@gmail.com</p>
+            <p align="center">Contact: 080-73424789</p><br>
+        </div>
+    </div>
+    <script>
+        let s=document.getElementById('search');
+        let one=document.getElementById('one').innerHTML;
+        let two=document.getElementById('two').innerHTML;
+        let three=document.getElementById('three').innerHTML;
+        let four=document.getElementById('four').innerHTML;
+        let five=document.getElementById('five').innerHTML;
+        let six=document.getElementById('six').innerHTML;
+        document.getElementById("si").onclick = function() {
+            let search = document.getElementById("search");
+
+            if (search.style.width === "0px"||search.style.width === "") {
+                search.style.width = "450px";
+                search.style.background = "black";
+                search.style.padding = "13px 22px 13px 22px";
+            } else {
+                let v=s.value;
+                if(one.toLowerCase().includes(v.toLowerCase()) && v!="")
+                {
+                    location.href='#cone';
+                    document.getElementById('one').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(two.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#cone';
+                    document.getElementById('two').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(three.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#cone';
+                    document.getElementById('three').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(four.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#ctwo';
+                    document.getElementById('four').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(five.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#ctwo';
+                    document.getElementById('five').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(six.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#ctwo';
+                    document.getElementById('six').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else{
+                    v="";
+                    document.getElementById('nf').style.display="block";
+                    setTimeout(() => {
+                        document.getElementById('nf').style.display="none";
+                    }, 1300);
+                }
+            }
+        };
+        document.getElementById("like").onclick=function(){
+            let i=document.getElementById("like");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i1");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'Margam Malargal');
+            localStorage.setItem('eventDate', 'February 9');
+            localStorage.setItem('eventTime', '7PM');
+            localStorage.setItem('eventPrice', 'Rs 299');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        document.getElementById("like1").onclick=function(){
+            let i=document.getElementById("like1");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i1");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'Hip Hop Dance');
+            localStorage.setItem('eventDate', 'February 3');
+            localStorage.setItem('eventTime', '1:30PM ');
+            localStorage.setItem('eventPrice', 'Rs 5500');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        document.getElementById("like2").onclick=function(){
+            let i=document.getElementById("like2");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i3");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'West Coast Swing');
+            localStorage.setItem('eventDate', 'February 4');
+            localStorage.setItem('eventTime', '5PM');
+            localStorage.setItem('eventPrice', 'Rs 4500');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        document.getElementById("like3").onclick=function(){
+            let i=document.getElementById("like3");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i4");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'The First Dance');
+            localStorage.setItem('eventDate', 'November 27');
+            localStorage.setItem('eventTime', '11AM ');
+            localStorage.setItem('eventPrice', 'Rs 34499');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        document.getElementById("like4").onclick=function(){
+            let i=document.getElementById("like4");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i5");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'Salsa Dance');
+            localStorage.setItem('eventDate', 'February 3');
+            localStorage.setItem('eventTime', '2:30PM ');
+            localStorage.setItem('eventPrice', 'Rs 7459');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        document.getElementById("like5").onclick=function(){
+            let i=document.getElementById("like5");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i6");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'Bollywood Dance');
+            localStorage.setItem('eventDate', 'February 1');
+            localStorage.setItem('eventTime', '7PM ');
+            localStorage.setItem('eventPrice', 'Rs 7500');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        function bookEvent(title, date, time, price) {
+            localStorage.setItem('eventTitle', title);
+            localStorage.setItem('eventDate', date);
+            localStorage.setItem('eventTime', time);
+            localStorage.setItem('eventPrice', price);
+            window.location.href = 'booking.html';
+        }
+    </script>
+</body>
+</html>

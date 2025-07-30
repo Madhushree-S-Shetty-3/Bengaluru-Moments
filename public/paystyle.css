@@ -1,0 +1,157 @@
+
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+body{
+    background-color: rgb(14, 14, 14);
+    color: antiquewhite;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#homebtn{
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    margin: 15px;
+    padding: 8px;
+    font-size: 20px;
+    border: 2px solid aquamarine;
+    border-radius: 50%;
+    color: antiquewhite;
+}
+#homebtn:hover{
+    border-color: rgb(5, 132, 136);
+    background-color: rgb(16, 174, 182);
+    color: whitesmoke;
+}
+#homebtn:active{
+    background-color: aquamarine;
+    color: antiquewhite;
+    font-size: 22px;
+
+}
+
+.container{
+    justify-content: center;
+    min-width: 400px;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.045),
+                0 5px 12px -2px rgba(255, 255, 255, 0.118),
+                0 10px 25px -4px rgba(255, 255, 255, 0.19);
+    transition: display 3s;
+    overflow: hidden;
+}
+.container .title{
+    font-size: 20px;
+}
+.container form .category{
+    margin-top: 10px;
+    padding-top: 20px;
+}
+.container form input{
+    display: none;
+}
+.category label{
+    margin: 15px;
+    margin-left: -1px;
+    width: 100%;
+    height: 65px;
+    padding: 20px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.256);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+label .imagename{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.imagename span{
+    margin-left: 20px;
+}
+.imagename .imgContainer{
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    width: 70px;
+    height: auto;
+
+}
+.paypal img{
+    width: 90px;
+}
+.check{
+    display: none;
+    min-height: 0;
+}
+.check i{
+    font-size: 18px;
+}
+
+#visa:checked ~ .category .visaMethod,
+#mastercard:checked ~ .category .masMethod,
+#paypal:checked ~ .category .payMethod,
+#upi:checked ~ .category .upiMethod{
+    box-shadow: 0 0 0 2px rgb(143, 143, 143);
+}
+
+#visa:checked ~ .category .visaMethod .check,
+#mastercard:checked ~ .category .masMethod .check,
+#paypal:checked ~ .category .payMethod .check,
+#upi:checked ~ .category .upiMethod .check{
+    display: block;min-height: 100%;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(19, 19, 19);
+    margin-top: 25px;
+    padding: 12px;
+    border: 2px solid rgb(10, 165, 165);
+    border-radius: 25px;
+    outline: none;
+    color: rgb(246, 246, 246);
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: aqua;
+    color: rgb(31, 31, 31);
+}
+#errorMsg{
+    display: none;
+    margin-left: 15px;    
+    color:red;
+    font-size: 12px;
+    transition: display;
+    transition-duration: .1s;
+}
+
+
+
+

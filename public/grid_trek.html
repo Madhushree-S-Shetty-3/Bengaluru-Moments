@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trekking</title>
+    <link rel="icon" href="logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./style1.css">
+</head>
+<body>
+    
+    <div class="image"> 
+        <img src="mou.avif" alt="">  
+    </div>
+    <div class="home">
+        <a href="YM.html"><i class='bx bxs-home' id="homebtn"></i></a>
+    </div>
+    <div class="sea">
+        <input type="text" placeholder="Search..." id="search">
+        <i class='bx bx-search-alt' style="font-size: 30px;color: rgb(0, 0, 0);padding: 6px;" id="si"></i>
+        <a href="Liked.html"><i class='bx bxs-heart' style='color:#060606;margin-left: 10px;font-size: 30px;color: rgb(0, 0, 0);padding: 6px;'  id="si"></i></a>
+    </div>
+    <div class="notfound" id="nf">
+        <span>Oops! Event not found...</span>
+    </div>
+    
+    <div class="con">
+        <div class="head">
+            <h1 align="center">Explore the Heights : </h1>
+            <h5>Uncover  Breath <em style="color: rgb(100, 174, 252);"> TREKKING</em> Destinations</h5>
+        </div>
+        <div class="container" id="cone">
+            <div class="item-container">
+                <div class="img-container">
+                    <img src="https://www.team-bhp.com/forum/attachments/travelogues/233868d1259088474-revisiting-history-channarayana-durga-trekking-near-bangalore-100_7147-medium.jpg" id="i1" alt="Event dance img">
+                </div>
+                <div class="body-container">
+                    <div class="overlay"></div>
+    
+                    <div class="event-info">
+                        <p class="title" id="one">Channarayana Durga</p>
+                        <div class="seperator"></div>
+                        <p class="info">Tumkur District</p>
+                        <div class="like">
+                            <p class="price" align="center">Rs 400<i class='bx bx-heart' id="like"></i>
+                                <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                            
+                        </div>
+                        <div class="additional-info">
+                            <p class="info">
+                                 <i class="fa fa-map-marker"></i>
+                                 Madhugiri 
+                            </p>
+                            <p class="info">
+                                <i class="fa fa-calendar"></i>
+                                 Fri, Jan 19 , 6:00 AM to 8:00 PM 
+                           </p>
+    
+                           <p class="info description">
+                            A trek that is very close to our hearts at Indiahikes since it reveals many surprises as you go climbing through each of its layers of the fort.  <span>more...</span>
+                           </p>
+                        </div>
+                    </div>
+                    <button class="action" id="actionbtn" onclick="bookEvent('Channarayana Durga', 'Fri, Jan 19', '6:00 AM to 8:00 PM', 'Rs 400')">Book it</button>
+                </div>
+            </div>
+    
+            <div class="item-container">
+                <div class="img-container">
+                    <img src="https://vl-prod-static.b-cdn.net/system/images/000/700/191/6a9dba44838d4586a91219906660c668/x1000gt/21-IMG20230730114231.jpg?1691479505" id="i2"
+                    alt="No preview available">
+                </div>
+                <div class="body-container">
+                    <div class="overlay"></div>
+    
+                    <div class="event-info">
+                        <p class="title" id="two">Minchukallu Betta</p>
+                        <div class="seperator"></div>
+                        <p class="info">Hoskote</p>
+                        <div class="like">
+                            <p class="price" align="center">Rs 550<i class='bx bx-heart' id="like1"></i>
+                                <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                        </div>
+    
+                        <div class="additional-info">
+                            <p class="info">
+                                 <i class="fa fa-map-marker"></i>
+                                 Masanipalya village, 18 km away from Tumkur.
+                            </p>
+                            <p class="info">
+                                <i class="fa fa-calendar"></i>
+                                 Sat, Jan 27 , 5:00 AM to 8:00 PM
+                           </p>
+    
+                           <p class="info description">
+                           Minchukallu betta is a massive hill, located around 85 km from Bangalore. Not so popular among trekkers, this was once a three-stage fortified hill. The ruins of the fort wall and temple are <span>more...</span>
+                           </p>
+                        </div>
+                    </div>
+                    <button class="action" id="actionbtn" onclick="bookEvent('Minchukallu Betta', 'Sat, Jan 27', '5:00 AM to 8:00 PM', 'Rs 550')">Book it</button>
+                </div>
+            </div>
+    
+            <div class="item-container">
+                <div class="img-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Dayara_Bugyal.jpg" id="i3">
+                </div>
+                <div class="body-container">
+                    <div class="overlay"></div>
+    
+                    <div class="event-info">
+                        <p class="title" id="three">Dayara Bugyal Trek</p>
+                        <div class="seperator"></div>
+                        <p class="info">Uttarkashi, Kansen</p>
+                        <div class="like">
+                            <p class="price" align="center">Rs 4000<i class='bx bx-heart' id="like2"></i>
+                                <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                        </div>
+    
+                        <div class="additional-info">
+                            <p class="info">
+                                 <i class="fa fa-map-marker"></i>
+                                 Uttarakhand
+                            </p>
+                            <p class="info">
+                                <i class="fa fa-calendar"></i>
+                                 Feb 2nd - Feb 8th 2024
+                           </p>
+    
+                           <p class="info description">
+                            The forests are splendid in spring, the meadows are an unbeatable green in summer, and they turn orange in autumn, with striking mountain views. The snowscape in winter is a world on its own.
+                           </p>
+                        </div>
+                    </div>
+                    <button class="action" id="actionbtn" onclick="bookEvent('Dayara Bugyal Trek', 'Feb 2nd - Feb 8th 2024', '', 'Rs 4000')">Book it</button>
+                </div>
+            </div>
+    
+            <div class="item-container" id="ctwo">
+                <div class="img-container">
+                    <img src="https://naturewalkers.in/wp-content/uploads/2017/11/edited.jpg" id="i4">
+                </div>
+                <div class="body-container">
+                    <div class="overlay"></div>
+    
+                    <div class="event-info">
+                        <p class="title" id="four">Kudremukh Trek</p>
+                        <div class="seperator"></div>
+                        <p class="info">Chikmagaluru district</p>
+                        <div class="like">
+                            <p class="price" align="center">Rs 3750<i class='bx bx-heart' id="like3"></i>
+                                <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                        </div>
+    
+                        <div class="additional-info">
+                            <p class="info">
+                                 <i class="fa fa-map-marker"></i>
+                                 Kalasa Taluk
+                            </p>
+                            <p class="info">
+                                <i class="fa fa-calendar"></i>
+                                 Feb 28th to March 2nd 
+                           </p>
+    
+                           <p class="info description">
+                            Kudremukh peak is nestled in the heart of the western ghats in Chikkamagaluru district. It comes under Kudremukh National Park which is the second-largest wildlife protected area in the western ghats. 
+                           </p>
+                        </div>
+                    </div>
+                    <button class="action" id="actionbtn" onclick="bookEvent('Kudremukh Trek', 'Feb 28th to March 2nd', '', 'Rs 3750')">Book it</button>
+                </div>
+            </div>
+    
+            <div class="item-container"id="ctwo">
+                <div class="img-container">
+                    <img src="https://localfoodconnect.org.au/wp-content/plugins/responsive-menu/v4.0.0/assets/images/no-preview.jpeg" id="i5">
+                </div>
+                <div class="body-container">
+                    <div class="overlay"></div>
+    
+                    <div class="event-info">
+                        <p class="title" id="five">Savandurga</p>
+                        <div class="seperator"></div>
+                        <p class="info">Ramanagara</p>
+                        <div class="like">
+                            <p class="price" align="center">Rs 650<i class='bx bx-heart' id="like4"></i>
+                                <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                        </div>
+    
+                        <div class="additional-info">
+                            <p class="info">
+                                 <i class="fa fa-map-marker"></i>
+                                 Savandurga
+                            </p>
+                            <p class="info">
+                                <i class="fa fa-calendar"></i>
+                                 Sat, March 4 , 6:00 AM to 7:00 PM 
+                           </p>
+    
+                           <p class="info description">
+                            This trail is famous for its challenging climb and amazing views of Magadi, Manchabele and Thippagondanahalli reservoirs and Arkavathi river.
+                           </p>
+                        </div>
+                    </div>
+                    <button class="action" id="actionbtn" onclick="bookEvent('Savandurga', 'Sat, March 4', '6:00 AM to 7:00 PM', 'Rs 650')">Book it</button>
+                </div>
+            </div>
+    
+            <div class="item-container"id="ctwo">
+                <div class="img-container">
+                    <img src="https://img.freepik.com/premium-photo/vertical-shot-trekker-annapurna-himalayas-nepal_181624-39331.jpg" id="i6">
+                </div>
+                <div class="body-container">
+                    <div class="overlay"></div>
+    
+                    <div class="event-info">
+                        <p class="title" id="six">Muttyaswamy Trek</p>
+                        <div class="seperator"></div>
+                        <p class="info">Ramanagara</p>
+                        <div class="like">
+                            <p class="price" align="center">Rs 1000<i class='bx bx-heart' id="like5"></i>
+                                <i class='bx bxs-heart' style='color:#e81212' id="liked" ></i></p>
+                        </div>
+    
+                        <div class="additional-info">
+                            <p class="info">
+                                 <i class="fa fa-map-marker"></i>
+                                 Muthurayaswamy Temple
+                            </p>
+                            <p class="info">
+                                <i class="fa fa-calendar"></i>
+                                 Sun, Feb 15 , 6:00 AM to 9:00 PM 
+                           </p>
+    
+                           <p class="info description">
+                            The Muthurayaswamy Betta Trek is a hidden gem. It is almost unknown and unheard of among local trekking circles. Yet, it holds a big bag of surprises waiting to be discovered.
+                           </p>
+                        </div>
+                    </div>
+                    <button class="action" id="actionbtn" onclick="bookEvent('Muttyaswamy Trek', 'Sun, Feb 15', '6:00 AM to 9:00 PM', 'Rs 1000')">Book it</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="conn" style="margin-top: -10px;padding-top: 10px;">
+        
+            <div class="con2">
+                <div style="margin-bottom: -20px;"><p align="center">Follow us on:</p></div><br>
+                <div class="con1">
+                    <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://twitter.com/?lang=en" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><i class='bx bxl-whatsapp' ></i></a>
+                </div>
+                
+            </div>
+            <p align="center">Mail us: eventorganiser@gmail.com</p>
+            <p align="center">Contact: 080-73424789</p><br>
+        </div>
+    </div>
+    
+    
+    <script>
+        let s=document.getElementById('search');
+        let one=document.getElementById('one').innerHTML;
+        let two=document.getElementById('two').innerHTML;
+        let three=document.getElementById('three').innerHTML;
+        let four=document.getElementById('four').innerHTML;
+        let five=document.getElementById('five').innerHTML;
+        let six=document.getElementById('six').innerHTML;
+        document.getElementById("si").onclick = function() {
+            let search = document.getElementById("search");
+
+            if (search.style.width === "0px"||search.style.width === "") {
+                search.style.width = "450px";
+                search.style.background = "black";
+                search.style.padding = "13px 22px 13px 22px";
+            } else {
+                let v=s.value;
+                if(one.toLowerCase().includes(v.toLowerCase()) && v!="")
+                {
+                    location.href='#cone';
+                    document.getElementById('one').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(two.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#cone';
+                    document.getElementById('two').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(three.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#cone';
+                    document.getElementById('three').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(four.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#ctwo';
+                    document.getElementById('four').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(five.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#ctwo';
+                    document.getElementById('five').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else if(six.toLowerCase().includes(v.toLowerCase())&& v!="")
+                {
+                    location.href='#ctwo';
+                    document.getElementById('six').style.backgroundColor='rgba(33, 33, 75, 0.420)';v="";
+                }
+                else{
+                    v="";
+                    document.getElementById('nf').style.display="block";
+                    setTimeout(() => {
+                        document.getElementById('nf').style.display="none";
+                    }, 1300);
+                }
+            }
+        };
+
+        document.getElementById("like").onclick=function(){
+            let i=document.getElementById("like");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i1");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'Channarayana Durga');
+            localStorage.setItem('eventDate', 'Fri, Jan 19');
+            localStorage.setItem('eventTime', '6:00 AM to 8:00 PM ');
+            localStorage.setItem('eventPrice', 'Rs 400');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+
+
+        document.getElementById("like1").onclick=function(){
+            let i=document.getElementById("like1");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i2");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'Minchukallu Betta');
+            localStorage.setItem('eventDate', 'Sat, Jan 27');
+            localStorage.setItem('eventTime', '5:00 AM to 8:00 PM');
+            localStorage.setItem('eventPrice', 'Rs 550');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        document.getElementById("like2").onclick=function(){
+            let i=document.getElementById("like2");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i3");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'Dayara Bugyal Trek');
+            localStorage.setItem('eventDate', 'Feb 2nd - Feb 8th 2024');
+            localStorage.setItem('eventTime', 'NA');
+            localStorage.setItem('eventPrice', 'Rs 4000');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        document.getElementById("like3").onclick=function(){
+            let i=document.getElementById("like3");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i4");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'Kudremukh Trek');
+            localStorage.setItem('eventDate', 'Feb 28th to March 2nd ');
+            localStorage.setItem('eventTime', 'NA');
+            localStorage.setItem('eventPrice', 'Rs 3750');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        document.getElementById("like4").onclick=function(){
+            let i=document.getElementById("like4");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i5");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'Savandurga');
+            localStorage.setItem('eventDate', 'Sat, March 4');
+            localStorage.setItem('eventTime', '6:00 AM to 7:00 PM');
+            localStorage.setItem('eventPrice', 'Rs 650');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        document.getElementById("like5").onclick=function(){
+            let i=document.getElementById("like5");
+            if(i.className=="bx bx-heart"){
+            i.className="bx bxs-heart";
+            i.style.color="rgb(255, 17, 57)";
+            var imgElement = document.getElementById("i6");
+            var imageUrl = imgElement.src;
+            localStorage.setItem('eventTitle', 'Muttyaswamy Trek');
+            localStorage.setItem('eventDate', 'Sun, Feb 15');
+            localStorage.setItem('eventTime', '6:00 AM to 9:00 PM ');
+            localStorage.setItem('eventPrice', 'Rs 1000');
+            localStorage.setItem('image', imageUrl);
+            localStorage.setItem('calling_page', 'grid_trek.html/#one');
+            localStorage.setItem('message', a);
+            setTimeout(()=>{
+                alert('Event added to liked page');
+            },800); 
+            setTimeout(()=>{
+                location.href="Liked.html"; 
+            },1000);  
+        }
+
+            else{
+            i.className="bx bx-heart";
+            i.style.color="#1f1f1f";}
+        }
+        function bookEvent(title, date, time, price) {
+            localStorage.setItem('eventTitle', title);
+            localStorage.setItem('eventDate', date);
+            localStorage.setItem('eventTime', time);
+            localStorage.setItem('eventPrice', price);
+            window.location.href = 'booking.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Your Event</title>
+    <link rel="icon" href="logo.jpg">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;600;700;800;900&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,900;1,100;1,300;1,400;1,700&family=Ubuntu:wght@400;700&display=swap');
+     </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="try.css">
+</head>
+<body>
+    <div class="entire">
+        <a href="YM.html"><i class='bx bxs-home' id="homebtn"></i></a>
+        <div class="left">
+            
+            <div class="head"><h1 align="center">Benefits of <br> Listing your Events</h1></div>
+
+            <div class="first">
+                <div class="icon">
+                    <img src="easy-removebg-preview.png" alt="" width="70px">
+                </div>
+                <div class="con" style="margin-left: 30px;">
+                    <div class="h"><span class="head">Effortless Registration Process</span></div>
+                    <div class="d"><span class="desc">We offer user-friendly and intuitive registration process. </span></div>
+                </div>
+            </div>
+
+            <div class="first">
+                <div class="icon">
+                    <img src="cost-removebg-preview.png" alt="" width="130px" style="margin-left: -30px;">
+                </div>
+                <div class="con" >
+                    <div class="h"><span class="head">Cost-Effective Marketing Solutions</span></div>
+                    <div class="d"><span class="desc">Can offer cost-effective marketing solutions compared to traditional advertising methods.</span></div>
+                </div>
+            </div>
+
+            <div class="first">
+                <div class="icon">
+                    <img src="hub-removebg-preview.png" alt="" width="70px">
+                </div>
+                <div class="con" style="margin-left: 30px;">
+                    <div class="h"><span class="head">Centralized Information Hub</span></div>
+                    <div class="d"><span class="desc">Centralized approach simplifies the attendee experience and reduces the likelihood of confusion.</span></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="mid" style="position: absolute;display: flex;justify-self: center;align-self: center;margin-left: 500px;display: none;" id="mid">
+            <img src="tick.gif" alt="" width="350px" height="300px" style="border-radius: 30px;">
+            <span style="font-size: 20px;color: white;font-family: sans-serif;margin-left: -300px;margin-top: 20px;">Request Sent Successfully!</span>
+        </div>
+        <div class="right">
+            <form action="/listEvent" method="POST" class="contact-form" id="eventForm">
+                <div class="mail">
+                    <span style="color: red;" id="e1">*</span>
+                    <input type="mail" id="mail" placeholder="Contact Mail Id" name="email">
+                </div>
+                <div class="name">
+                    <span style="color: red;" id="e2">*</span>
+                    <input type="text" id="ename" placeholder="Event's Name" name="name">
+                </div>
+                <div class="tag">
+                    <input type="text" placeholder="Tagline" id="tag" name="tag">
+                </div>
+                <div class="desc">
+                    <input type="text" style="width: 580px;margin-left: 20px;height: 80px;" name="desc" id="desc" placeholder="Description" name="desc">
+                </div>
+                <div class="time">                
+                    <div class="date">
+                        <label for="date">Date</label>
+                        <input type="text" id="date" placeholder="DD/MM/YYYY" name="date"></div>                
+                    <div class="from">
+                        <label for="from">Time</label>
+                        <input type="time" name="time" id="from">
+                    </div>
+                    <div class="price">
+                        <label for="p">Price per ticket</label>
+                        <input type="text" name="price" id="p" >
+                    </div>
+                </div>
+                <div class="loc"><input type="text" id="loc" name="loc" placeholder="Location"></div>
+
+                <label for="img" >
+                    <div class="photo" id="divphoto" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+                        <i class='bx bx-upload' style="color: rgb(255, 255, 255);font-size: 25px;"></i>
+                        <header style="font-size: 13px;">Drag and drop</header>
+                        <span>OR</span>
+                        <header style="font-size: 13px;"><u>Click to upload</u></header>
+                        <input type="file" id="img" name="img" hidden onchange="handleFileSelect(event)">
+                    </div>
+                    </label>
+                <div class="sub" align="center" style="margin-top: 15px;"><input type="submit" class="btn" id="btn" value="Submit" name="submit"></div>
+            </form>
+            
+        </div>
+    </div>
+    <script>
+    document.getElementById("p").oninput=function(){ 
+        if (!document.getElementById("p").value.startsWith('₹')) {          
+        document.getElementById("p").value='₹'+"  "+document.getElementById("p").value;}
+    }  
+
+    document.getElementById('btn').onclick = function(event) {         
+    event.preventDefault();
+    let name = document.getElementById("ename").value;
+    let mail = document.getElementById("mail").value;
+    let tag=document.getElementById("tag").value;
+    let desc=document.getElementById("desc").value;
+    let date=document.getElementById("date").value;
+    let time=document.getElementById("from").value;
+    let price=document.getElementById("p").value;
+    let loc=document.getElementById("loc").value; 
+
+    /*if(document.getElementById('mail').value==""){
+        document.getElementById("e1").innerHTML="* Required field!";return false;
+    }
+        else{
+            document.getElementById("e1").innerHTML="";
+        }
+       
+    if(document.getElementById('ename').value==""){
+        document.getElementById("e2").innerHTML="* Required field!";return false;
+    }   
+    else{
+            document.getElementById("e2").innerHTML="";
+        }
+        const eventName = document.getElementById("ename").value;
+    
+    const email = document.getElementById("mail").value;
+    const emailPattern = /^[^\s@]+@(?:gmail\.com|bmsce\.ac(?:\.in)?)$/;
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");document.getElementById("e1").innerHTML==""
+        return false; 
+    }
+    if (eventName.trim().length < 3) {
+        alert("Event name must be at least 3 characters long.");document.getElementById("e2").innerHTML==""
+        return false; 
+    }
+    if(document.getElementById("e1").innerHTML=="*"&&document.getElementById("e2").innerHTML=="*"&&document.getElementById('mail').value!=""&&document.getElementById('ename').value!=""){*/
+    fetch('/listEvent', {
+        method: 'POST',
+    body: JSON.stringify({name:name,email:mail,tag:tag,desc:desc,date:date,time:time,loc:loc,price:price}),
+    headers: {
+        'Content-Type': 'application/json'
+    }
+    })
+    .then(response => {
+        if (!response.ok) {
+            console.log('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Response from backend:', data);
+        if (data.message == "Email Sent Successfully") {
+            document.getElementById('mid').style.display='flex';
+        } else {
+            alert("Failed to send request. Please try again later.");
+        }
+    })
+    .catch(error => {
+        console.error('There has been a problem with your fetch operation:', error);
+        alert("Failed to send request. Please try again later.");
+    });
+ }
+       
+    
+        document.getElementById("file").oninput=function(){
+        if(document.getElementById("file").value=="")
+        {
+            document.getElementById("file").style.display="none";
+        document.getElementById("label").style.display="block";
+        }
+        else{
+        document.getElementById("file").style.display="block";
+        document.getElementById("label").style.display="none";}
+    }
+
+    function dragOverHandler(event) {
+    event.preventDefault();
+}
+
+function dropHandler(event) {
+    event.preventDefault();
+    var file = event.dataTransfer.files[0];
+    handleFile(file);
+}
+
+function handleFileSelect(event) {
+    var file = event.target.files[0];
+    handleFile(file);
+}
+
+function handleFile(file) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+        var img = document.createElement('img');
+        img.src = e.target.result;
+        img.style.width = 'auto';
+        img.style.height = '98px';
+        document.getElementById('divphoto').innerHTML = '';
+        document.getElementById('divphoto').appendChild(img);
+    };
+    reader.readAsDataURL(file);
+    document.getElementById('img').files = file;
+}
+    </script>
+</body>
+</html>
