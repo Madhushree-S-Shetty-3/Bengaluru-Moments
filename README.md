@@ -1,7 +1,7 @@
 <h1 align="center">🎉 Bengaluru Moments</h1>
 
 <p align="center">
-  <img src=https://github.com/Madhushree-S-Shetty-3/Bengaluru-Moments/blob/main/logo_zoom.png alt="Bengaluru Moments Banner" width="10%" />
+  <img src=https://github.com/Madhushree-S-Shetty-3/Bengaluru-Moments/blob/main/logo_zoom.png alt="Bengaluru Moments Banner" width="15%" />
 </p>
 
 <p align="center">
@@ -42,10 +42,10 @@ Clean, minimal, and intuitive UI built for ease of use.
 
 ## 💻 Demo
 
-> 🔗 **Live Website:** https://madhushree-s-shetty-3.github.io/Bengaluru-Moments/  
-
+> 🔗 **Live Website:**  
 <p align="center">
   <img src=https://github.com/Madhushree-S-Shetty-3/Bengaluru-Moments/blob/main/logo.jpg alt="App Demo" width="5%"/>
+  https://madhushree-s-shetty-3.github.io/Bengaluru-Moments/ 
 </p>
 
 ---
