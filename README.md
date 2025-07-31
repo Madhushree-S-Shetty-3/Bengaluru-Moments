@@ -1,7 +1,7 @@
 <h1 align="center">🎉 Bengaluru Moments</h1>
 
 <p align="center">
-  <img src="https://github.com/Madhushree-S-Shetty-3/Bengaluru-Moments/logo_zoom.png" alt="Bengaluru Moments Banner" width="100%" />
+  <img src=https://github.com/Madhushree-S-Shetty-3/Bengaluru-Moments/blob/main/logo_zoom.png alt="Bengaluru Moments Banner" width="100%" />
 </p>
 
 <p align="center">
@@ -45,7 +45,7 @@ Clean, minimal, and intuitive UI built for ease of use.
 > 🔗 **Live Website:** https://madhushree-s-shetty-3.github.io/Bengaluru-Moments/  
 
 <p align="center">
-  <img src="https://github.com/Madhushree-S-Shetty-3/Bengaluru-Moments/logo.png" alt="App Demo" width="90%"/>
+  <img src=https://github.com/Madhushree-S-Shetty-3/Bengaluru-Moments/blob/main/logo.jpg alt="App Demo" width="90%"/>
 </p>
 
 ---
@@ -77,16 +77,23 @@ index.html
 Open this file directly in your browser. Make sure the backend is running if you're using dynamic event data.
 
 ### 🛠 Folder Structure
+
+  <pre>
 Bengaluru-Moments
- ├── assets/                 # Images, icons, banners
- ├── backend/                # Node.js + Express backend
- │   ├── models/             # MongoDB schemas
- │   ├── routes/             # API routes for events
- │   └── server.js           # Entry point
- ├── index.html              # Homepage
- ├── style.css               # Styling
- ├── script.js               # Frontend logic
- └── README.md
+├── backend/
+│   ├── models/
+│   ├── routes/
+│   ├── server.js
+│   └── .env
+├── public/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+├── images/
+├── README.md
+├── package.json
+└── .gitignore
+</pre>
 
 ### 🔐 Environment Variables
 Inside the backend directory, create a .env file:
@@ -103,4 +110,3 @@ PORT=5000
 
 ---
 <p align="center"> Made with ❤️ in Bengaluru </p>
----
